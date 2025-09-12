@@ -167,21 +167,23 @@ li {
 }
 /* Vertical full-page scroll for case studies */
 .case-studies-vertical {
-  height: 100vh;              /* full screen height container */
-  overflow-y: scroll;         /* vertical scroll */
+  max-height: 80vh;          /* smaller container */
+  overflow-y: auto;          /* enable scrolling */
   scroll-snap-type: y mandatory;
+  padding-right: 10px;
 }
 
 .case-study {
-  height: 100vh;              /* each project fills viewport */
-  scroll-snap-align: start;   /* snap into place */
+  min-height: 60vh;          /* enough height but not full screen */
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 40px;
+  justify-content: flex-start;
+  padding: 30px;
+  margin-bottom: 20px;
   background: rgba(30, 30, 30, 0.95);
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
 }
 
 
