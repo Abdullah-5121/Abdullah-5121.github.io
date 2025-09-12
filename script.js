@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll-based fade-in for sections
-    const sections = document.querySelectorAll('.animated-section');
+    // Scroll-based fade-in for sections and cards
+    const elementsToAnimate = document.querySelectorAll('.animated-section, .case-study, .connect-box');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.3 // Trigger when 30% of the section is visible
+        threshold: 0.3 // Trigger when 30% of the element is visible
     });
 
-    sections.forEach(section => {
-        observer.observe(section);
+    elementsToAnimate.forEach(element => {
+        observer.observe(element);
     });
 });
