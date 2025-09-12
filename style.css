@@ -110,7 +110,15 @@ section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
-  animation: fadeInUp 1.5s ease-in;
+  /* Scroll-based animation styles */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
@@ -135,22 +143,8 @@ h2 {
   box-shadow: var(--shadow-dark);
   border: 1px solid var(--accent-blue);
   position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   backdrop-filter: blur(5px);
-}
-
-.case-study::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: conic-gradient(from 0deg, transparent, var(--accent-blue), transparent);
-    z-index: -1;
-    border-radius: 25px;
-    animation: spin-border 6s linear infinite;
-    pointer-events: none;
 }
 
 .case-study:hover {
@@ -171,7 +165,7 @@ h2 {
 }
 
 ul {
-  list-style-type: none; /* Removed default bullets for cleaner look */
+  list-style-type: none;
   padding-left: 0;
 }
 
@@ -183,7 +177,7 @@ li {
 }
 
 li::before {
-  content: '⚡'; /* Custom lightning bolt bullet */
+  content: '⚡';
   position: absolute;
   left: 0;
   color: var(--accent-blue);
@@ -230,19 +224,9 @@ a:hover {
   100% { transform: scale(1); opacity: 0.1; }
 }
 
-@keyframes spin-border {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 @keyframes flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.8; }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
