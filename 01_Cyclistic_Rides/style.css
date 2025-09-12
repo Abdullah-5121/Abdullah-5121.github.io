@@ -14,26 +14,48 @@ body {
   overflow-x: hidden;
 }
 
+/* Header */
 header {
   background: #111;
-  padding: 60px 20px 40px;
+  padding: 40px 20px;
   text-align: center;
   color: #ffffff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  animation: fadeInDown 1s ease-in-out;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-header p {
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4fc3f7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  border-color: #03a9f4;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.header-text p {
   font-size: 1.2rem;
   color: #bbbbbb;
-  animation: fadeInUp 1s ease-in-out;
 }
 
+/* Sections */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -49,22 +71,32 @@ h2 {
 
 /* Case Studies Scrollable Section */
 .case-studies-vertical {
-  max-height: 80vh;         /* fits within page */
-  overflow-y: auto;         /* allow scrolling */
+  max-height: 80vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;                /* space between cards */
+  gap: 20px;
   padding-right: 10px;
 }
 
 /* Each Case Study Card */
 .case-study {
   background: rgba(30, 30, 30, 0.95);
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 20px 25px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  height: auto;             /* fit to text */
-  max-height: none;
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease, 
+    background 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.case-study:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(40, 40, 40, 0.95);
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+  border-radius: 30px; /* More curvy on hover */
 }
 
 .case-study h3 {
@@ -100,14 +132,68 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Scrollbar Styling */
+.case-studies-vertical::-webkit-scrollbar {
+  width: 8px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-track {
+  background: #0f2027;
+  border-radius: 4px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: #4fc3f7;
+  border-radius: 4px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: #03a9f4;
+}
+
+/* Firefox support */
+.case-studies-vertical {
+  scrollbar-width: thin;
+  scrollbar-color: #4fc3f7 #0f2027;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #0f2027;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4fc3f7;
+  border-radius: 6px;
+  border: 2px solid #0f2027;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #03a9f4;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #4fc3f7 #0f2027;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
-  header h1 {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .header-text h1 {
     font-size: 2rem;
   }
-  header p {
+
+  .header-text p {
     font-size: 1rem;
   }
+
   section {
     padding: 20px 15px;
   }
@@ -144,74 +230,3 @@ a:hover {
     opacity: 1;
   }
 }
-/* Custom Scrollbar for Case Studies box */
-.case-studies-vertical::-webkit-scrollbar {
-  width: 8px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-track {
-  background: #0f2027;   /* same as page background */
-  border-radius: 4px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb {
-  background: #4fc3f7;   /* accent color */
-  border-radius: 4px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb:hover {
-  background: #03a9f4;
-}
-
-/* Firefox support */
-.case-studies-vertical {
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 #0f2027;
-}
-
-/* Style the entire page scrollbar too */
-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #0f2027;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #4fc3f7;
-  border-radius: 6px;
-  border: 2px solid #0f2027; /* adds spacing */
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #03a9f4;
-}
-
-/* Firefox full page scrollbar */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 #0f2027;
-}
-.case-study {
-  background: rgba(30, 30, 30, 0.95);
-  border-radius: 20px;   /* normal rounded */
-  padding: 20px 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  height: auto;
-  transition: 
-    transform 0.3s ease, 
-    box-shadow 0.3s ease, 
-    background 0.3s ease,
-    border-radius 0.3s ease;   /* animate radius */
-}
-
-.case-study:hover {
-  transform: translateY(-5px) scale(1.02);
-  background: rgba(40, 40, 40, 0.95);
-  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
-  border-radius: 30px;   /* more curvy on hover */
-}
-
-
-
