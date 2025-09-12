@@ -4,76 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M. Abdullah | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="01_Cyclistic_Rides/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Hero / Header -->
   <header>
     <div class="header-content">
-      <!-- Profile Picture -->
       <img src="01_Cyclistic_Rides/Mie_Pic.jpg" alt="M. Abdullah" class="profile-pic">
-      
-      <!-- Text -->
       <div class="header-text">
         <h1>M. Abdullah</h1>
         <p>Data Analyst | R • SQL • Tableau</p>
+        <p class="tagline">Turning data into actionable insights</p>
       </div>
     </div>
   </header>
 
   <!-- About Me -->
-  <section>
+  <section class="about">
     <h2>📌 About Me</h2>
     <p>I’m a data analyst passionate about turning data into actionable insights. This site showcases my projects, skills, and experience using R, Tableau, and more.</p>
+    <div class="tools">
+      <i class="fab fa-r-project"></i>
+      <i class="fas fa-database"></i>
+      <i class="fab fa-tableau"></i>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills">
+    <h2>💻 Skills</h2>
+    <div class="skill-bar">
+      <span>R</span>
+      <div class="bar"><div class="progress r"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>SQL</span>
+      <div class="bar"><div class="progress sql"></div></div>
+    </div>
+    <div class="skill-bar">
+      <span>Tableau</span>
+      <div class="bar"><div class="progress tableau"></div></div>
+    </div>
   </section>
 
   <!-- Case Studies -->
-  <section>
+  <section class="projects">
     <h2>📊 Case Studies</h2>
     <div class="case-studies-vertical">
 
-      <!-- Cyclistic Case Study -->
       <div class="case-study">
         <h3>01. Cyclistic Bike-Share User Behavior Analysis</h3>
-        <p>A case study analyzing ride behavior differences between annual members and casual riders using R and Tableau.</p>
+        <p>Analyzing ride behavior differences between annual members and casual riders using R and Tableau.</p>
         <ul>
-          <li><strong>Data Source:</strong> Cyclistic Dataset 
-            <a href="https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090" target="_blank">2019</a> and 
-            <a href="https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855" target="_blank">2020</a>
-          </li>
+          <li><strong>Data Source:</strong> Cyclistic 2019 & 2020</li>
           <li><strong>Tools:</strong> R, dplyr, lubridate, Tableau, PowerPoint</li>
-          <li><a href="https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/CyclisticDataset_17539250254980/Dashboard1" target="_blank">🔗 Tableau Dashboard</a></li>
-          <li><a href="01_Cyclistic_Rides/02_Presentation/01_Casestudy-1_Report.pdf" target="_blank">📄 Final Presentation PDF</a></li>
-          <li><a href="01_Cyclistic_Rides/01_R-Work/cyclistic_analysis.R" target="_blank">📄 R Script</a></li>
-          <li><a href="01_Cyclistic_Rides/summary(Final).csv" target="_blank">📊 Summary Dataset</a></li>
-          <li><strong>GitHub Files:</strong> <a href="https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/01_Cyclistic_Rides" target="_blank">Visit project folder</a></li>
+          <li><a href="#">🔗 Tableau Dashboard</a></li>
+          <li><a href="#">📄 Final Presentation PDF</a></li>
+          <li><a href="#">📄 R Script</a></li>
         </ul>
       </div>
 
-      <!-- Superstore Case Study -->
       <div class="case-study">
         <h3>02. Superstore Sales & Profitability Analysis</h3>
-        <p>A case study analyzing Superstore dataset across segments, categories, regions, and shipping modes.</p>
+        <p>Analyzing Superstore dataset across segments, categories, regions, and shipping modes.</p>
         <ul>
-          <li><strong>Data Source:</strong> Superstore <a href="https://www.kaggle.com/datasets/vivek468/superstore-dataset-final?" target="_blank">Dataset</a></li>
+          <li><strong>Data Source:</strong> Superstore Dataset</li>
           <li><strong>Tools:</strong> R, ggplot2, Tableau</li>
-          <li><a href="02_SuperStore/02_Presentation/SuperStore Presentation.pdf" target="_blank">📄 Final Presentation PDF</a></li>
-          <li><a href="02_SuperStore/01_R Work/SuperStore Dataset ( Cleaning + Analysis + Visualization).R" target="_blank">📄 R Script</a></li>
-          <li><a href="02_SuperStore/Cleaned_Superstore.csv" target="_blank">📊 Cleaned Dataset</a></li>
-          <li><a href="https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/SuperStoreDatasetVisualization/Dashboard1" target="_blank">🔗 Tableau Dashboard</a></li>
-          <li><strong>GitHub Files:</strong> <a href="https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/02_SuperStore" target="_blank">Visit project folder</a></li>
+          <li><a href="#">📄 Final Presentation PDF</a></li>
+          <li><a href="#">📄 R Script</a></li>
         </ul>
       </div>
 
     </div>
   </section>
 
-  <!-- Contact -->
-<section>
-  <div class="connect-box">
+  <!-- Connect -->
+  <section class="connect">
     <h2>🔗 Connect</h2>
-    <p>Email: <a href="mailto:mabdullahpro437@gmail.com">mabdullahpro437@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-abdullah-32b66a373/" target="_blank">linkedin.com/in/mabdullahckl</a></p>
-  </div>
-</section>
+    <div class="connect-box">
+      <p>Email: <a href="mailto:mabdullahpro437@gmail.com">mabdullahpro437@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-abdullah-32b66a373/" target="_blank">linkedin.com/in/mabdullahckl</a></p>
+      <div class="social-icons">
+        <a href="https://github.com/Abdullah-5121" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-abdullah-32b66a373/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
