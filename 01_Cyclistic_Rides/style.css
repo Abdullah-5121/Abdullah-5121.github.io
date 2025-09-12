@@ -195,12 +195,22 @@ body {
 }
 /* Hover animation for case study cards */
 .case-study {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 20px;   /* smoother, rounded corners */
+  padding: 20px 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  height: auto;
+  max-height: none;
+
+  /* smooth hover animation */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .case-study:hover {
-  transform: translateY(-5px) scale(1.02);    /* lift up + enlarge */
-  background: rgba(40, 40, 40, 0.95);         /* slightly brighter */
-  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4); /* blue glow */
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(40, 40, 40, 0.95);
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+  border-radius: 20px;   /* keep rounded edges even on hover */
 }
+
 
