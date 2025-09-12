@@ -47,6 +47,15 @@ header {
   max-width: 900px;
   margin: 40px auto;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
+}
+
+/* 2. Header Hover Animation */
+header:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+  border-radius: 30px;
 }
 
 .header-content {
@@ -55,7 +64,7 @@ header {
   gap: 30px;
 }
 
-/* 2. Profile Picture Hover Animation */
+/* 3. Profile Picture Hover Animation */
 .profile-pic {
   width: 180px;
   height: 180px;
@@ -71,7 +80,7 @@ header {
   border-color: #03a9f4;
 }
 
-/* 3. Header Text Hover Animations */
+/* 4. Header Text Hover Animations */
 .header-text {
   display: flex;
   flex-direction: column;
@@ -100,7 +109,7 @@ header {
   color: #4fc3f7;
 }
 
-/* 4. Scroll Animation Initial State */
+/* 5. Scroll Animation Initial State */
 section {
   padding: 40px 20px;
   max-width: 1000px;
@@ -131,7 +140,7 @@ h2 {
   padding-right: 10px;
 }
 
-/* 5. Custom Scrollbar for Case Studies Section */
+/* 6. Custom Scrollbar for Case Studies Section */
 .case-studies-vertical::-webkit-scrollbar {
   width: 8px;
 }
@@ -150,7 +159,7 @@ h2 {
   background: #03a9f4;
 }
 
-/* 6. Case Study Card Hover & Scroll Animations */
+/* 7. Case Study Card Hover & Scroll Animations */
 .case-study {
   background: rgba(30, 30, 30, 0.95);
   border-radius: 20px;
@@ -206,7 +215,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 7. Connect Box Hover & Scroll Animations */
+/* 8. Connect Box Hover & Scroll Animations */
 .connect-box {
   background: #111;
   display: flex;
