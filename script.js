@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Select all elements you want to animate on scroll
-    const elementsToAnimate = document.querySelectorAll('header, section, .case-study, .connect-box');
+    const elementsToAnimate = document.querySelectorAll('header, section, .connect-box');
 
     // Create a new Intersection Observer
     const observer = new IntersectionObserver((entries) => {
