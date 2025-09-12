@@ -138,54 +138,27 @@ li {
     opacity: 1;
   }
 }
-/* Case studies scrollable container */
-.case-studies {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 15px;
-  scroll-snap-type: x mandatory;
-}
 
-.case-studies::-webkit-scrollbar {
-  height: 8px;
-}
-
-.case-studies::-webkit-scrollbar-thumb {
-  background: #4fc3f7;
-  border-radius: 4px;
-}
-
-.case-studies::-webkit-scrollbar-track {
-  background: #1e1e1e;
-}
-
-/* Each project card */
-.case-studies .project {
-  flex: 0 0 320px;  /* fixed width for rectangle */
-  scroll-snap-align: start;
-}
 /* Vertical full-page scroll for case studies */
 .case-studies-vertical {
-.case-studies-vertical {
-  max-height: 80vh;        /* container scrolls if needed */
-  overflow-y: auto;        
-  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;              /* space between cards */
+  max-height: 80vh;       /* scroll area height */
+  overflow-y: auto;       
   padding-right: 10px;
 }
 
 .case-study {
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 25px 30px;
-  margin-bottom: 20px;
   background: rgba(30, 30, 30, 0.95);
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  height: auto;            /* fit to content */
+  padding: 25px 30px;
+  height: auto;           /* no fixed height */
+  min-height: unset;      /* remove earlier constraints */
+  max-height: unset;
 }
+
 
 
 
