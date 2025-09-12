@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Montserrat:wght@500;700&display=swap');
 
 :root {
-  --main-bg-color: #0a192f; /* Deep Blue-Black */
+  --main-bg-color: #0a192f;
   --card-bg-color: rgba(13, 27, 42, 0.7);
   --accent-cyan: #00e6e6;
   --secondary-cyan: #00b3b3;
@@ -10,7 +10,6 @@
   --text-grey: #bbbbbb;
   --shadow-glow: 0 0 15px var(--accent-cyan);
   --shadow-dark: 0 6px 20px rgba(0, 0, 0, 0.6);
-  --header-bg-blur: rgba(20, 40, 60, 0.6); /* Slightly lighter for hero */
 }
 
 * {
@@ -25,82 +24,80 @@ body {
   color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
-  position: relative;
-  z-index: 1;
 }
 
-/* Background Grid Animation */
-.background-grid {
+/* Background Animation */
+.background-animation-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 50px 50px; /* Adjust grid size */
-    opacity: 0.1;
-    animation: pan-background 30s linear infinite;
+    overflow: hidden;
     z-index: -1;
 }
 
-/* Header & Hero Section */
+.background-animation-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(0, 230, 230, 0.2), transparent);
+    animation: spin-background 8s linear infinite;
+}
+
+/* Header & Interactive Box */
 .main-header {
-  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px; /* Increased padding */
-  max-width: 1100px; /* Wider header */
+  padding: 60px 20px;
+  max-width: 1100px;
   margin: 40px auto;
   position: relative;
 }
 
-.interactive-header {
-    display: flex; /* Use flex for alignment */
-    align-items: center; /* Vertically center */
-    gap: 40px; /* Space between pic and text */
+.interactive-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
     padding: 30px 40px;
     border-radius: 20px;
-    background: var(--header-bg-blur);
+    background: rgba(20, 40, 60, 0.6);
     box-shadow: var(--shadow-dark);
-    border: 1px solid var(--accent-cyan);
     position: relative;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform-style: preserve-3d; /* For 3D tilt */
+    backdrop-filter: blur(8px);
 }
 
-.interactive-header::before {
+.interactive-box::before {
     content: '';
     position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle at center, var(--accent-cyan) 0%, transparent 60%);
-    opacity: 0;
-    animation: header-pulse 5s ease-out infinite alternate;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: conic-gradient(from 0deg, transparent, var(--accent-cyan), transparent);
     z-index: -1;
+    border-radius: 25px;
+    animation: spin-border 6s linear infinite;
+    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-.interactive-header:hover {
-    transform: translateY(-10px) rotateX(2deg) rotateY(3deg); /* 3D tilt */
+.interactive-box:hover {
+    transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 230, 230, 0.4);
+    border: 1px solid var(--accent-cyan);
 }
-.interactive-header:hover::before {
-    opacity: 0.2; /* Show pulse on hover */
-}
-
-
-/* Profile Picture & Glowing Box */
-.profile-area {
-    position: relative;
-    z-index: 2; /* Ensure pic is above any bg effects */
+.interactive-box:hover::before {
+    opacity: 1;
 }
 
+/* Profile Picture & Alignment */
 .profile-pic {
   width: 180px;
   height: 180px;
@@ -118,13 +115,12 @@ body {
 
 /* Header Text (Name + Characteristics) */
 .header-text {
-    text-align: left; /* Align text to the right of the image */
-    z-index: 2;
+  text-align: left;
 }
 
 .header-text h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3.2rem; /* Larger font */
+  font-size: 3.2rem;
   margin-bottom: 8px;
   text-shadow: var(--shadow-glow);
   transition: transform 0.3s ease, text-shadow 0.3s ease;
@@ -138,8 +134,8 @@ body {
 }
 
 .header-text p {
-  font-family: 'Roboto Mono', monospace; /* Consistent monospace font */
-  font-size: 1.5rem; /* Larger font */
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
   color: var(--text-grey);
   transition: transform 0.3s ease, color 0.3s ease;
   letter-spacing: 1px;
@@ -150,8 +146,8 @@ body {
   color: var(--accent-cyan);
 }
 
-/* Sections (Animated on Scroll) */
-.animated-section { /* Renamed for clarity */
+/* Sections & Scroll-triggered Animations */
+.animated-section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: 40px auto;
@@ -167,10 +163,10 @@ body {
 
 h2 {
   color: var(--accent-cyan);
-  font-size: 2.2rem; /* Slightly larger */
+  font-size: 2.2rem;
   margin-bottom: 30px;
   text-shadow: var(--shadow-glow);
-  text-align: center; /* Center section titles */
+  text-align: center;
 }
 
 /* Case Studies Section */
@@ -183,25 +179,25 @@ h2 {
 /* Case Study Card */
 .case-study {
   background: var(--card-bg-color);
-  border-radius: 15px; /* Slightly less rounded */
+  border-radius: 15px;
   padding: 25px 30px;
   box-shadow: var(--shadow-dark);
-  border: 1px solid rgba(0, 230, 230, 0.4); /* Softer border glow */
+  border: 1px solid rgba(0, 230, 230, 0.4);
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-  backdrop-filter: blur(8px); /* More blur for a 'glass' effect */
+  backdrop-filter: blur(8px);
 }
 
 .case-study:hover {
-  transform: translateY(-12px) rotateX(2deg); /* Lift and slight X-axis tilt */
-  box-shadow: 0 12px 35px rgba(0, 230, 230, 0.5); /* Stronger hover glow */
+  transform: translateY(-12px);
+  box-shadow: 0 12px 35px rgba(0, 230, 230, 0.5);
   border-color: var(--accent-cyan);
 }
 
 .case-study h3 {
   color: var(--text-light);
   margin-bottom: 12px;
-  font-size: 1.6rem; /* Slightly larger */
+  font-size: 1.6rem;
   transition: text-shadow 0.3s ease;
 }
 
@@ -218,7 +214,7 @@ li {
   margin: 10px 0;
   line-height: 1.5;
   position: relative;
-  padding-left: 25px; /* More space for icon */
+  padding-left: 25px;
 }
 
 li::before {
@@ -226,7 +222,7 @@ li::before {
   position: absolute;
   left: 0;
   color: var(--accent-cyan);
-  font-size: 1.1em; /* Slightly larger icon */
+  font-size: 1.1em;
 }
 
 a {
@@ -248,9 +244,9 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 30px 40px; /* More padding */
+  padding: 30px 40px;
   border-radius: 15px;
-  max-width: 650px; /* Slightly wider */
+  max-width: 650px;
   margin: 40px auto;
   box-shadow: var(--shadow-dark);
   border: 1px solid var(--accent-cyan);
@@ -260,19 +256,18 @@ a:hover {
 
 .connect-box:hover {
   transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 10px 30px rgba(0, 230, 230, 0.5);
+  box-shadow: 10px 10px 30px rgba(0, 230, 230, 0.5);
 }
 
 /* Animations */
-@keyframes pan-background {
-    from { background-position: 0 0; }
-    to { background-position: 50px 50px; } /* Moves the grid */
+@keyframes spin-background {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-@keyframes header-pulse {
-    0% { transform: scale(1); opacity: 0; }
-    50% { transform: scale(1.2); opacity: 0.2; }
-    100% { transform: scale(1); opacity: 0; }
+@keyframes spin-border {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes flicker {
@@ -283,7 +278,7 @@ a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .interactive-header {
+  .interactive-box {
       flex-direction: column;
       gap: 25px;
       padding: 30px 20px;
@@ -296,11 +291,5 @@ a:hover {
   }
   .header-text p {
       font-size: 1.2rem;
-  }
-  h2 {
-      font-size: 1.8rem;
-  }
-  .case-study {
-      padding: 20px;
   }
 }
