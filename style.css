@@ -48,6 +48,13 @@ header {
   margin: 40px auto;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+header.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 2. Header Hover Animation */
@@ -109,13 +116,21 @@ header:hover {
   color: #4fc3f7;
 }
 
-/* 5. About Me Section Styling and Hover Animation */
+/* 5. Section Styling and Hover Animation */
 section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
   border-radius: 20px;
+  background: #111;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section:hover {
@@ -124,7 +139,6 @@ section:hover {
   background: rgba(30, 30, 30, 0.95);
   border-radius: 30px;
 }
-
 
 h2 {
   color: #00bcd4;
@@ -223,6 +237,13 @@ a:hover {
   margin: 40px auto;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.connect-box.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .connect-box:hover {
