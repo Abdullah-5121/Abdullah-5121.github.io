@@ -1,3 +1,4 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 * {
@@ -86,7 +87,7 @@ h2 {
 
 /* ===== CASE STUDIES ===== */
 .case-studies-vertical {
-  max-height: 80vh;
+  max-height: 70vh;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -94,62 +95,23 @@ h2 {
   padding-right: 10px;
 }
 
-/* Each Case Study Card */
 .case-study {
   background: rgba(30, 30, 30, 0.95);
   border-radius: 20px;
   padding: 20px 25px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  transition: 
-    transform 0.3s ease, 
-    box-shadow 0.3s ease, 
-    background 0.3s ease,
-    border-radius 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
 }
 
 .case-study:hover {
   transform: translateY(-5px) scale(1.02);
   background: rgba(40, 40, 40, 0.95);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
-  border-radius: 30px; /* More curvy on hover */
-}
-
-.case-study h3 {
-  color: #ffffff;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-}
-
-.case-study p {
-  color: #cccccc;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 25px;
-}
-
-li {
-  margin: 8px 0;
-  line-height: 1.5;
-}
-
-a {
-  color: #4fc3f7;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a:hover {
-  color: #03a9f4;
-  text-shadow: 0 0 8px rgba(79, 195, 247, 0.6);
-  text-decoration: underline;
+  border-radius: 30px;
 }
 
 /* ===== CONTACT SECTION ===== */
-section:last-of-type {
+.contact {
   background: #111;
   padding: 40px 20px;
   border-top: 2px solid #222;
@@ -158,16 +120,18 @@ section:last-of-type {
   box-shadow: 0 -2px 10px rgba(0,0,0,0.6);
 }
 
-section:last-of-type h2 {
+.contact h2 {
   color: #00bcd4;
 }
 
-section:last-of-type a {
+.contact a {
   font-weight: 600;
+  color: #4fc3f7;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-section:last-of-type a:hover {
-  color: #4fc3f7;
+.contact a:hover {
+  color: #03a9f4;
   text-shadow: 0 0 10px rgba(79, 195, 247, 0.8);
 }
 
@@ -175,47 +139,15 @@ section:last-of-type a:hover {
 .case-studies-vertical::-webkit-scrollbar {
   width: 8px;
 }
-
 .case-studies-vertical::-webkit-scrollbar-track {
   background: #0f2027;
-  border-radius: 4px;
 }
-
 .case-studies-vertical::-webkit-scrollbar-thumb {
   background: #4fc3f7;
   border-radius: 4px;
 }
-
 .case-studies-vertical::-webkit-scrollbar-thumb:hover {
   background: #03a9f4;
-}
-
-.case-studies-vertical {
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 #0f2027;
-}
-
-body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background: #0f2027;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #4fc3f7;
-  border-radius: 6px;
-  border: 2px solid #0f2027;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #03a9f4;
-}
-
-body {
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 #0f2027;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -236,10 +168,6 @@ body {
 
   .header-text p {
     font-size: 1rem;
-  }
-
-  section {
-    padding: 20px 15px;
   }
 }
 
