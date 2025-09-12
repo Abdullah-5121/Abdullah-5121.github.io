@@ -26,26 +26,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Background Animation */
-.background-animation-container {
+/* Animated Hexagon Grid Background */
+.hexagon-background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.background-animation-container::after {
-    content: '';
-    position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(from 0deg, transparent, rgba(0, 230, 230, 0.2), transparent);
-    animation: spin-background 8s linear infinite;
+    background-image: 
+        repeating-linear-gradient(60deg, rgba(0, 230, 230, 0.03) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(-60deg, rgba(0, 230, 230, 0.03) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(90deg, rgba(0, 230, 230, 0.03) 1px, transparent 1px, transparent 20px);
+    animation: pan-hexagons 40s linear infinite;
+    z-index: -1;
 }
 
 /* Header & Interactive Box */
@@ -260,9 +253,13 @@ a:hover {
 }
 
 /* Animations */
-@keyframes spin-background {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+@keyframes pan-hexagons {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 500px 500px, -500px 500px, 500px -500px;
+  }
 }
 
 @keyframes spin-border {
