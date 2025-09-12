@@ -26,7 +26,7 @@ header {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* align image to left */
+  justify-content: flex-start;
   gap: 30px;
   max-width: 1000px;
   margin: auto;
@@ -87,7 +87,7 @@ h2 {
 
 /* ===== CASE STUDIES ===== */
 .case-studies-vertical {
-  max-height: 70vh;
+  max-height: 80vh;         /* Full height for scrolling */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -95,19 +95,31 @@ h2 {
   padding-right: 10px;
 }
 
+/* Each Case Study Card */
 .case-study {
   background: rgba(30, 30, 30, 0.95);
   border-radius: 20px;
-  padding: 20px 25px;
+  padding: 25px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease, background 0.3s ease;
 }
 
 .case-study:hover {
-  transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(1.03);
   background: rgba(40, 40, 40, 0.95);
-  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.5);
   border-radius: 30px;
+}
+
+.case-study h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.case-study p {
+  color: #cccccc;
+  margin-bottom: 10px;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -148,6 +160,26 @@ h2 {
 }
 .case-studies-vertical::-webkit-scrollbar-thumb:hover {
   background: #03a9f4;
+}
+
+/* Global scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #0f2027;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #4fc3f7;
+  border-radius: 6px;
+  border: 2px solid #0f2027;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #03a9f4;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #4fc3f7 #0f2027;
 }
 
 /* ===== RESPONSIVE ===== */
