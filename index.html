@@ -1,24 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M. Abdullah | Data Analyst Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Style -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
   <!-- Header -->
   <header>
     <div class="header-content">
       <!-- Profile Picture -->
       <img src="Mie_Pic.jpg" alt="M. Abdullah" class="profile-pic">
-      
+
       <!-- Text -->
       <div class="header-text">
         <h1>M. Abdullah</h1>
         <p>Data Analyst | R • SQL • Tableau</p>
+
+        <!-- Connect Box inside header -->
+        <div class="connect-box">
+          <p>Email: <a href="mailto:mabdullahpro437@gmail.com">mabdullahpro437@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-abdullah-32b66a373/" target="_blank">linkedin.com/in/mabdullahckl</a></p>
+        </div>
       </div>
     </div>
   </header>
@@ -70,11 +86,25 @@
     </div>
   </section>
 
-  <!-- Contact -->
-<section>
-  <div class="connect-box">
-    <h2>🔗 Connect</h2>
-    <p>Email: <a href="mailto:mabdullahpro437@gmail.com">mabdullahpro437@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-abdullah-32b66a373/" target="_blank">linkedin.com/in/mabdullahckl</a></p>
-  </div>
-</section>
+  <!-- Initialize Particles -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 60, "density": {"enable": true, "value_area": 800}},
+        "color": {"value": "#4fc3f7"},
+        "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}},
+        "opacity": {"value": 0.6, "random": true, "anim": {"enable": true, "speed": 0.5, "opacity_min": 0.2, "sync": false}},
+        "size": {"value": 4, "random": true, "anim": {"enable": true, "speed": 2, "size_min": 1, "sync": false}},
+        "line_linked": {"enable": true, "distance": 120, "color": "#4fc3f7", "opacity": 0.4, "width": 1},
+        "move": {"enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false}
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {"onhover": {"enable": true, "mode": "grab"}, "onclick": {"enable": true, "mode": "push"}, "resize": true},
+        "modes": {"grab": {"distance": 140, "line_linked": {"opacity": 0.5}}, "bubble": {"distance": 200, "size": 8, "duration": 2, "opacity": 0.8, "speed": 3}, "repulse": {"distance": 100, "duration": 0.4}, "push": {"particles_nb": 4}, "remove": {"particles_nb": 2}}
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
