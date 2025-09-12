@@ -20,23 +20,20 @@ body {
 header {
   background: #111;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
-  padding: 30px 40px;
-  border-radius: 20px;
-  max-width: 900px;
-  margin: 40px auto;
+  align-items: center; /* vertical center alignment */
+  justify-content: flex-start; /* left align content */
+  gap: 30px; /* spacing between image and text */
+  padding: 30px 40px; /* smaller padding for tighter fit */
+  border-radius: 20px; /* optional: rounded corners */
+  max-width: 900px; /* optional: header width */
+  margin: 40px auto; /* center header horizontally on page */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-  flex-wrap: wrap;
 }
 
 .header-content {
   display: flex;
-  align-items: center;
+  align-items: center; /* vertical center */
   gap: 30px;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 /* Profile Picture */
@@ -51,15 +48,16 @@ header {
 }
 
 .profile-pic:hover {
-  transform: scale(1.15) rotate(5deg);
+  transform: scale(1.15) rotate(5deg); /* slight rotation + scale */
   border-color: #03a9f4;
 }
 
-/* Header Text */
+
+/* Header Text (Name + Characteristics) */
 .header-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; /* vertically center text with picture */
 }
 
 .header-text h1 {
@@ -84,35 +82,6 @@ header {
   color: #4fc3f7;
 }
 
-/* Connect Box inside header */
-.connect-box {
-  background: #111;
-  padding: 20px 25px;
-  border-radius: 20px;
-  margin-top: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-.connect-box:hover {
-  transform: translateY(-5px) scale(1.02);
-  background: rgba(30,30,30,0.95);
-  box-shadow: 0 8px 25px rgba(79,195,247,0.4);
-}
-
-.connect-box a {
-  color: #4fc3f7;
-  font-weight: 500;
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.connect-box a:hover {
-  color: #03a9f4;
-  transform: scale(1.05);
-  text-decoration: underline;
-}
-
 /* Sections */
 section {
   padding: 40px 20px;
@@ -125,20 +94,6 @@ h2 {
   color: #00bcd4;
   font-size: 1.8rem;
   margin-bottom: 20px;
-}
-
-section h2:hover {
-  transform: translateY(-5px) scale(1.05);
-  color: #4fc3f7;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: default;
-}
-
-section p:hover {
-  transform: translateY(-3px) scale(1.02);
-  color: #a0e0ff;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: default;
 }
 
 /* Case Studies Scrollable Section */
@@ -157,7 +112,11 @@ section p:hover {
   border-radius: 20px;
   padding: 20px 25px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease, 
+    background 0.3s ease,
+    border-radius 0.3s ease;
 }
 
 .case-study:hover {
@@ -266,6 +225,28 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -273,4 +254,52 @@ body::-webkit-scrollbar-thumb:hover {
   to {
     opacity: 1;
   }
+}
+/* Connect Box */
+.connect-box {
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 25px 35px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.connect-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+}
+
+.connect-box a {
+  color: #4fc3f7;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.connect-box a:hover {
+  color: #03a9f4;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* About Me Hover Animations */
+section h2:hover {
+  transform: translateY(-5px) scale(1.05);
+  color: #4fc3f7;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+section p:hover {
+  transform: translateY(-3px) scale(1.02);
+  color: #a0e0ff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
 }
