@@ -144,3 +144,28 @@ a:hover {
     opacity: 1;
   }
 }
+/* Custom Scrollbar for Case Studies */
+.case-studies-vertical::-webkit-scrollbar {
+  width: 8px;                /* slim scrollbar */
+}
+
+.case-studies-vertical::-webkit-scrollbar-track {
+  background: #1e1e1e;        /* dark background to match theme */
+  border-radius: 4px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: #4fc3f7;        /* accent color */
+  border-radius: 4px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: #03a9f4;        /* brighter on hover */
+}
+
+/* For Firefox */
+.case-studies-vertical {
+  scrollbar-width: thin;
+  scrollbar-color: #4fc3f7 #1e1e1e;
+}
+
