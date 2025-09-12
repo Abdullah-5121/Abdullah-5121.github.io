@@ -193,3 +193,14 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #4fc3f7 #0f2027;
 }
+/* Hover animation for case study cards */
+.case-study {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.case-study:hover {
+  transform: translateY(-5px) scale(1.02);    /* lift up + enlarge */
+  background: rgba(40, 40, 40, 0.95);         /* slightly brighter */
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4); /* blue glow */
+}
+
