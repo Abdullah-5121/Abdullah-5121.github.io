@@ -289,3 +289,17 @@ body::-webkit-scrollbar-thumb:hover {
   text-decoration: underline;
 }
 
+/* About Me Hover Animations */
+section h2:hover {
+  transform: translateY(-5px) scale(1.05);
+  color: #4fc3f7;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+section p:hover {
+  transform: translateY(-3px) scale(1.02);
+  color: #a0e0ff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
