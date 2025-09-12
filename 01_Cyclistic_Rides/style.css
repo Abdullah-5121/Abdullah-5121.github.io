@@ -138,3 +138,31 @@ li {
     opacity: 1;
   }
 }
+/* Case studies scrollable container */
+.case-studies {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  scroll-snap-type: x mandatory;
+}
+
+.case-studies::-webkit-scrollbar {
+  height: 8px;
+}
+
+.case-studies::-webkit-scrollbar-thumb {
+  background: #4fc3f7;
+  border-radius: 4px;
+}
+
+.case-studies::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Each project card */
+.case-studies .project {
+  flex: 0 0 320px;  /* fixed width for rectangle */
+  scroll-snap-align: start;
+}
+
