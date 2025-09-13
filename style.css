@@ -22,21 +22,22 @@ body {
 
 /* ===== WebKit Scrollbar Styling (Chrome, Edge, Safari) ===== */
 /* This makes the scrollbar "overlay" and appear only on scroll */
-::-webkit-scrollbar {
+/* Corrected styling for the main page scrollbar */
+body::-webkit-scrollbar {
   width: 6px;
-  background: transparent;
+  background-color: transparent; /* Makes the whole bar's container transparent */
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+body::-webkit-scrollbar-track {
+  background-color: transparent; /* Hides the scrollbar track */
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background: rgba(79, 195, 247, 0.7);
   border-radius: 6px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
   background: rgba(3, 169, 244, 0.9);
 }
 
@@ -286,6 +287,7 @@ a:hover {
   .header-text h1 { font-size: 2.5rem; }
   .header-text p { font-size: 1.2rem; }
 }
+
 @media (max-width: 600px) {
   .header-text h1 { font-size: 2rem; }
   .header-text p { font-size: 1rem; }
@@ -297,6 +299,7 @@ a:hover {
     font-size: 1.3rem;
   }
 }
+
 /* ===== Mobile fix: header/profile (paste at end of style.css) ===== */
 @media (max-width: 768px) {
   header.hover-header {
@@ -333,11 +336,13 @@ a:hover {
     text-align: center;
     gap: 4px;
   }
+
   .header-text h1 {
     font-size: 1.6rem !important;
     margin: 4px 0;
     line-height: 1.05;
   }
+
   .header-text p {
     font-size: 1rem !important;
     margin: 0;
@@ -346,6 +351,6 @@ a:hover {
 
   header.hover-header:hover {
     transform: none !important;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.5) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
   }
 }
