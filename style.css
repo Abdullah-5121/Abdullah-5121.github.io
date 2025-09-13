@@ -265,25 +265,60 @@ a:hover {
     font-size: 1.3rem;
   }
 }
-/* ✅ Mobile Responsive Fix (Profile Section) */
+/* ===== Mobile fix: header/profile (paste at end of style.css) ===== */
 @media (max-width: 768px) {
-  .profile {
-    flex-direction: column !important;   /* Stack vertically */
-    align-items: center !important;      /* Center content */
+  /* Make header stack vertically on small screens */
+  header.hover-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 16px;
+    gap: 12px;
+    max-width: 95%;
+    margin: 18px auto;
+  }
+
+  /* Ensure header-content centers and stacks */
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
     text-align: center;
   }
 
-  .profile img {
-    width: 140px !important;             /* Fixed width */
-    height: 140px !important;            /* Fixed height */
+  /* Fix image size and prevent stretching */
+  .profile-pic {
+    width: 140px !important;
+    height: 140px !important;
+    max-width: 140px;
     border-radius: 50% !important;
-    object-fit: cover !important;        /* Prevent stretching */
-    margin-bottom: 15px;
+    object-fit: cover !important;   /* <-- critical to avoid stretching */
+    margin: 0 auto;
   }
 
-  .profile h1,
-  .profile p {
+  /* Center header text and adjust sizes */
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin: 5px 0;
+    gap: 4px;
+  }
+  .header-text h1 {
+    font-size: 1.6rem !important;
+    margin: 4px 0;
+    line-height: 1.05;
+  }
+  .header-text p {
+    font-size: 1rem !important;
+    margin: 0;
+    color: #bbbbbb;
+  }
+
+  /* Disable hover-scaling on mobile to avoid layout jumps */
+  header.hover-header:hover {
+    transform: none !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5) !important;
   }
 }
