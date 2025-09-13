@@ -1,30 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* ===== Scrollbar Styling (like Android) ===== */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(79, 195, 247, 0.7);
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(3, 169, 244, 0.9);
-}
-
-/* For Firefox */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 #0f2027;
 }
 
 body {
@@ -33,6 +12,8 @@ body {
   color: #e0e0e0;
   line-height: 1.6;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #4fc3f7 #0f2027;
   position: relative;
 }
 
@@ -64,8 +45,9 @@ header {
 
 header:hover {
   transform: translateY(-5px) scale(1.02);
+  /* Faded background effect */
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
-  background: rgba(20, 20, 20, 0.95);
 }
 
 .header-content {
@@ -101,6 +83,7 @@ header:hover {
   margin-bottom: 10px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .header-text h1:hover {
   transform: translateY(-5px) scale(1.05);
   color: #4fc3f7;
@@ -111,6 +94,7 @@ header:hover {
   color: #bbbbbb;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .header-text p:hover {
   transform: translateY(-3px) scale(1.03);
   color: #4fc3f7;
@@ -130,6 +114,7 @@ h2 {
   margin-bottom: 20px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 h2:hover {
   transform: translateY(-5px) scale(1.05);
   color: #4fc3f7;
@@ -162,7 +147,8 @@ section p:hover {
 
 .case-study:hover {
   transform: translateY(-5px) scale(1.02);
-  background: rgba(40, 40, 40, 0.95);
+  /* Faded background effect */
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
   border-radius: 30px;
 }
@@ -182,16 +168,19 @@ ul {
   list-style-type: disc;
   padding-left: 25px;
 }
+
 li {
   margin: 8px 0;
   line-height: 1.5;
 }
+
 a {
   color: #4fc3f7;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 a:hover {
   color: #03a9f4;
   text-decoration: underline;
@@ -214,7 +203,8 @@ a:hover {
 
 .connect-box:hover {
   transform: translateY(-5px) scale(1.02);
-  background: rgba(30, 30, 30, 0.95);
+  /* Faded background effect */
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
 }
 
@@ -249,12 +239,39 @@ a:hover {
 }
 
 /* Brand Colors */
-.social-icons a[href^="mailto"]:hover { background: #D44638; }
-.social-icons a[href*="linkedin"]:hover { background: #0e76a8; }
+.social-icons a[href^="mailto"]:hover {
+  background: #D44638;
+}
+
+.social-icons a[href*="linkedin"]:hover {
+  background: #0e76a8;
+}
+
 .social-icons a[href*="instagram"]:hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
-.social-icons a[href*="facebook"]:hover { background: #1877F2; }
+
+.social-icons a[href*="facebook"]:hover {
+  background: #1877F2;
+}
+
+/* ===== Scrollbar Styling (like Android) ===== */
+.case-studies-vertical::-webkit-scrollbar {
+  width: 6px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: rgba(79, 195, 247, 0.7);
+  border-radius: 6px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: rgba(3, 169, 244, 0.9);
+}
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -264,14 +281,34 @@ a:hover {
     gap: 20px;
     padding: 30px 20px;
   }
-  .header-text h1 { font-size: 2.5rem; }
-  .header-text p { font-size: 1.2rem; }
+
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-text p {
+    font-size: 1.2rem;
+  }
 }
+
 @media (max-width: 600px) {
-  .header-text h1 { font-size: 2rem; }
-  .header-text p { font-size: 1rem; }
-  .profile-pic { max-width: 140px; height: auto; }
-  .social-icons { gap: 15px; }
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+
+  .profile-pic {
+    max-width: 140px;
+    height: auto;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
   .social-icons a {
     width: 45px;
     height: 45px;
@@ -315,11 +352,13 @@ a:hover {
     text-align: center;
     gap: 4px;
   }
+
   .header-text h1 {
     font-size: 1.6rem !important;
     margin: 4px 0;
     line-height: 1.05;
   }
+
   .header-text p {
     font-size: 1rem !important;
     margin: 0;
@@ -328,6 +367,6 @@ a:hover {
 
   header.hover-header:hover {
     transform: none !important;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.5) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
   }
 }
