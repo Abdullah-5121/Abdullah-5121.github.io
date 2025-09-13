@@ -235,47 +235,50 @@ a:hover {
 }
 
 /* Brand Colors */
-.social-icons a[href^="mailto"]:hover {
-  background: #D44638;
+.social-icons a[href^="mailto"]:hover { background: #D44638; }
+.social-icons a[href*="linkedin"]:hover { background: #0e76a8; }
+.social-icons a[href*="instagram"]:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-icons a[href*="facebook"]:hover { background: #1877F2; }
+
+/* ===== Scrollbars (Full page + Case Studies) ===== */
+/* Full page */
+html {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(79,195,247,0.7) transparent;
 }
 
-.social-icons a[href*="linkedin"]:hover {
-  background: #0e76a8;
-}
-
-.social-icons a[href*="instagram"]:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-.social-icons a[href*="facebook"]:hover {
-  background: #1877F2;
-}
-
-/* ===== Scrollbars hidden by default, fade in while scrolling ===== */
-.case-studies-vertical,
-body {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(79, 195, 247, 0.7) transparent;
-  -ms-overflow-style: none;  /* IE 10+ */
-}
-
-.case-studies-vertical::-webkit-scrollbar,
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 8px;
   background: transparent;
-  opacity: 0;
-  transition: opacity 0.5s;
 }
 
-.case-studies-vertical::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
-  background: rgba(79, 195, 247, 0.7);
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(79,195,247,0.7);
   border-radius: 6px;
 }
 
-.case-studies-vertical::-webkit-scrollbar-thumb:hover,
-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(3, 169, 244, 0.9);
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(3,169,244,0.9);
+}
+
+/* Case Studies */
+.case-studies-vertical::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: rgba(79,195,247,0.7);
+  border-radius: 6px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: rgba(3,169,244,0.9);
+}
+
+.case-studies-vertical {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79,195,247,0.7) transparent;
 }
 
 /* ===== Responsive ===== */
@@ -286,42 +289,18 @@ body::-webkit-scrollbar-thumb:hover {
     gap: 20px;
     padding: 30px 20px;
   }
-
-  .header-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .header-text p {
-    font-size: 1.2rem;
-  }
+  .header-text h1 { font-size: 2.5rem; }
+  .header-text p { font-size: 1.2rem; }
 }
 
 @media (max-width: 600px) {
-  .header-text h1 {
-    font-size: 2rem;
-  }
-
-  .header-text p {
-    font-size: 1rem;
-  }
-
-  .profile-pic {
-    max-width: 140px;
-    height: auto;
-  }
-
-  .social-icons {
-    gap: 15px;
-  }
-
-  .social-icons a {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
-  }
+  .header-text h1 { font-size: 2rem; }
+  .header-text p { font-size: 1rem; }
+  .profile-pic { max-width: 140px; height: auto; }
+  .social-icons { gap: 15px; }
+  .social-icons a { width: 45px; height: 45px; font-size: 1.3rem; }
 }
 
-/* ===== Mobile fix: header/profile ===== */
 @media (max-width: 768px) {
   header.hover-header {
     flex-direction: column;
@@ -331,7 +310,6 @@ body::-webkit-scrollbar-thumb:hover {
     max-width: 95%;
     margin: 18px auto;
   }
-
   .header-content {
     display: flex;
     flex-direction: column;
@@ -340,7 +318,6 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
     text-align: center;
   }
-
   .profile-pic {
     width: 140px !important;
     height: 140px !important;
@@ -349,7 +326,6 @@ body::-webkit-scrollbar-thumb:hover {
     object-fit: cover !important;
     margin: 0 auto;
   }
-
   .header-text {
     display: flex;
     flex-direction: column;
@@ -357,19 +333,16 @@ body::-webkit-scrollbar-thumb:hover {
     text-align: center;
     gap: 4px;
   }
-
   .header-text h1 {
     font-size: 1.6rem !important;
     margin: 4px 0;
     line-height: 1.05;
   }
-
   .header-text p {
     font-size: 1rem !important;
     margin: 0;
     color: #bbbbbb;
   }
-
   header.hover-header:hover {
     transform: none !important;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
