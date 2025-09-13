@@ -113,22 +113,5 @@
       "retina_detect": true
     });
   </script>
-
-  
-<script>
-let scrollTimeout;
-
-function showScrollbars() {
-  document.body.style.setProperty('--scrollbar-opacity', '1');
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(() => {
-    document.body.style.setProperty('--scrollbar-opacity', '0');
-  }, 1000); // hides after 1s of no scrolling
-}
-
-window.addEventListener('scroll', showScrollbars);
-document.querySelector('.case-studies-vertical').addEventListener('scroll', showScrollbars);
-</script>
-
 </body>
 </html>
