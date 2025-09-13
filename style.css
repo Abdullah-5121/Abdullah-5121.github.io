@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); 
 
 * {
   box-sizing: border-box;
@@ -13,6 +13,10 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+
+  /* Firefox full page scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79,195,247,0.7) transparent;
 }
 
 /* Particle Background */
@@ -132,6 +136,24 @@ section p:hover {
   flex-direction: column;
   gap: 20px;
   padding-right: 10px;
+
+  /* Keep case study scrollbar style as-is */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79,195,247,0.7) transparent;
+}
+
+.case-studies-vertical::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: rgba(79,195,247,0.7);
+  border-radius: 6px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: rgba(3,169,244,0.9);
 }
 
 /* Case Study Cards */
@@ -240,32 +262,10 @@ a:hover {
 .social-icons a[href*="instagram"]:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
 .social-icons a[href*="facebook"]:hover { background: #1877F2; }
 
-/* ===== Scrollbars ===== */
-
-/* Case Studies scrollbar */
-.case-studies-vertical::-webkit-scrollbar {
-  width: 6px;
-  background: transparent;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb {
-  background: rgba(79,195,247,0.7);
-  border-radius: 6px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb:hover {
-  background: rgba(3,169,244,0.9);
-}
-
-.case-studies-vertical {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(79,195,247,0.7) transparent;
-}
-
-/* Full page scrollbar - Chrome, Edge, Safari */
+/* ===== Full page scrollbar - Chrome, Edge, Safari ===== */
 body::-webkit-scrollbar {
   width: 6px;
-  background: transparent;
+  background: transparent; /* track matches theme */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -275,12 +275,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(3,169,244,0.9);
-}
-
-/* Full page scrollbar - Firefox */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(79,195,247,0.7) transparent;
 }
 
 /* ===== Responsive ===== */
