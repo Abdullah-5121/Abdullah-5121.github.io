@@ -22,39 +22,27 @@ body {
 
 /* ===== WebKit Scrollbar Styling (Chrome, Edge, Safari) ===== */
 /* This makes the scrollbar "overlay" and appear only on scroll */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 6px; /* Width of the entire scrollbar */
-  background: transparent; /* Makes the track area transparent */
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: transparent; /* Makes the scrollbar track completely invisible */
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: rgba(79, 195, 247, 0.7); /* Color of the draggable scroll thumb */
   border-radius: 6px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: rgba(3, 169, 244, 0.9);
 }
 
-/* Case Studies specific scrollbar (optional, but good for consistency) */
-.case-studies-vertical::-webkit-scrollbar {
-  width: 6px;
+/* Hide the scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+  display: none;
 }
-.case-studies-vertical::-webkit-scrollbar-track {
-  background: transparent;
-}
-.case-studies-vertical::-webkit-scrollbar-thumb {
-  background: rgba(79, 195, 247, 0.7);
-  border-radius: 6px;
-}
-.case-studies-vertical::-webkit-scrollbar-thumb:hover {
-  background: rgba(3, 169, 244, 0.9);
-}
-
 
 /* Particle Background */
 #particles-js {
