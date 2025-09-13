@@ -265,30 +265,25 @@ a:hover {
     font-size: 1.3rem;
   }
 }
-/* ✅ Mobile Responsive Fix */
+/* ✅ Mobile Responsive Fix (Profile Section) */
 @media (max-width: 768px) {
   .profile {
-    flex-direction: column;       /* Stack items vertically */
-    align-items: center;          /* Center everything */
+    flex-direction: column !important;   /* Stack vertically */
+    align-items: center !important;      /* Center content */
     text-align: center;
   }
 
   .profile img {
-    width: 150px;                 /* Keep image size fixed */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;             /* Prevent stretching */
+    width: 140px !important;             /* Fixed width */
+    height: 140px !important;            /* Fixed height */
+    border-radius: 50% !important;
+    object-fit: cover !important;        /* Prevent stretching */
     margin-bottom: 15px;
   }
 
-  .profile h1 {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-  }
-
+  .profile h1,
   .profile p {
-    font-size: 1rem;
-    max-width: 90%;
+    text-align: center;
+    margin: 5px 0;
   }
 }
-
