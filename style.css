@@ -251,7 +251,7 @@ a:hover { color: #03a9f4; text-decoration: underline; }
   background: #111;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   padding: 25px 35px;
   border-radius: 20px;
@@ -270,6 +270,7 @@ a:hover { color: #03a9f4; text-decoration: underline; }
 .social-icons {
   display: flex;
   gap: 20px;
+  justify-content: center; 
 }
 
 .social-icons a {
