@@ -13,40 +13,40 @@ body {
   background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
   color: #e0e0e0;
   line-height: 1.6;
-  overflow-x: hidden;
-  /* For Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 transparent;
+  overflow: hidden; /* This hides the default scrollbar */
   position: relative;
 }
 
-/* ===== WebKit Scrollbar Styling (Chrome, Edge, Safari) ===== */
-/* Applying to html and body for maximum browser compatibility and to prevent overriding */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
+/* The new custom scrollbar */
+.custom-scrollbar-track {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.custom-scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 6px;
-  background-color: transparent; /* Makes the scrollbar background transparent */
-}
-
-html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track {
-  background-color: transparent; /* Makes the scrollbar track transparent */
-}
-
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
   background: rgba(79, 195, 247, 0.7);
   border-radius: 6px;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
 }
 
-html::-webkit-scrollbar-thumb:hover,
-body::-webkit-scrollbar-thumb:hover {
+.custom-scrollbar-thumb:hover {
   background: rgba(3, 169, 244, 0.9);
 }
 
-/* Hide the scrollbar buttons (arrows) */
-::-webkit-scrollbar-button {
-  display: none;
+/* Style the app container to handle scrolling */
+#app {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 /* Particle Background */
@@ -168,6 +168,21 @@ section p:hover {
   flex-direction: column;
   gap: 20px;
   padding-right: 10px;
+}
+
+/* This is for the inner case study scrollbar. Note: This will not work if we apply the js solution above */
+.case-studies-vertical::-webkit-scrollbar {
+  width: 6px;
+}
+.case-studies-vertical::-webkit-scrollbar-track {
+  background: transparent;
+}
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: rgba(79, 195, 247, 0.7);
+  border-radius: 6px;
+}
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: rgba(3, 169, 244, 0.9);
 }
 
 .case-study {
