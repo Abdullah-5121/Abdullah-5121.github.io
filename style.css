@@ -247,3 +247,39 @@ a:hover { color: #03a9f4; text-decoration: underline; }
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.6);
   cursor: pointer;
 }
+.connect-box {
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 25px 35px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.connect-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: #4fc3f7;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #03a9f4;
+  transform: scale(1.2);
+}
+
