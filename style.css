@@ -242,10 +242,30 @@ a:hover {
 
 /* ===== Scrollbars ===== */
 
+/* Case Studies scrollbar */
+.case-studies-vertical::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: rgba(79,195,247,0.7);
+  border-radius: 6px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: rgba(3,169,244,0.9);
+}
+
+.case-studies-vertical {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79,195,247,0.7) transparent;
+}
+
 /* Full page scrollbar - Chrome, Edge, Safari */
 body::-webkit-scrollbar {
   width: 6px;
-  background: #111; /* match theme background */
+  background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -260,30 +280,30 @@ body::-webkit-scrollbar-thumb:hover {
 /* Full page scrollbar - Firefox */
 body {
   scrollbar-width: thin;
-  scrollbar-color: rgba(79,195,247,0.7) #111;
-}
-
-/* Case Studies scrollbar */
-.case-studies-vertical::-webkit-scrollbar {
-  width: 6px;
-  background: #111;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb {
-  background: rgba(79,195,247,0.7);
-  border-radius: 6px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb:hover {
-  background: rgba(3,169,244,0.9);
-}
-
-.case-studies-vertical {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(79,195,247,0.7) #111;
+  scrollbar-color: rgba(79,195,247,0.7) transparent;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   header { flex-direction: column; justify-content: center; gap: 20px; padding: 30px 20px; }
-  .header-text h1 { font-size: 2.
+  .header-text h1 { font-size: 2.5rem; }
+  .header-text p { font-size: 1.2rem; }
+}
+
+@media (max-width: 600px) {
+  .header-text h1 { font-size: 2rem; }
+  .header-text p { font-size: 1rem; }
+  .profile-pic { max-width: 140px; height: auto; }
+  .social-icons { gap: 15px; }
+  .social-icons a { width: 45px; height: 45px; font-size: 1.3rem; }
+}
+
+@media (max-width: 768px) {
+  header.hover-header { flex-direction: column; align-items: center; padding: 18px 16px; gap: 12px; max-width: 95%; margin: 18px auto; }
+  .header-content { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; text-align: center; }
+  .profile-pic { width: 140px !important; height: 140px !important; max-width: 140px; border-radius: 50% !important; object-fit: cover !important; margin: 0 auto; }
+  .header-text { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+  .header-text h1 { font-size: 1.6rem !important; margin: 4px 0; line-height: 1.05; }
+  .header-text p { font-size: 1rem !important; margin: 0; color: #bbbbbb; }
+  header.hover-header:hover { transform: none !important; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important; }
+}
