@@ -35,13 +35,16 @@ header {
   max-width: 900px;
   margin: 40px auto;
   box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
 }
 
-.hover-header:hover {
+/* Hover effect on the whole header box */
+header:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 25px rgba(79,195,247,0.4);
+  background: rgba(20,20,20,0.95);
 }
+
 
 .header-content {
   display: flex;
