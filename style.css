@@ -265,3 +265,30 @@ a:hover {
     font-size: 1.3rem;
   }
 }
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;       /* Stack items vertically */
+    align-items: center;          /* Center everything */
+    text-align: center;
+  }
+
+  .profile img {
+    width: 150px;                 /* Keep image size fixed */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;             /* Prevent stretching */
+    margin-bottom: 15px;
+  }
+
+  .profile h1 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .profile p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
+
