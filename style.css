@@ -132,3 +132,85 @@ a:hover { color: #03a9f4; text-decoration: underline; }
   .header-text p { font-size: 1rem; }
   .profile-pic { max-width: 140px; height: auto; }
 }
+/* Connect Box with Icons */
+.connect-box {
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 35px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.connect-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
+}
+
+.connect-box h2 {
+  font-size: 1.8rem;
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #222;
+  color: #4fc3f7;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  background: #4fc3f7;
+  color: #111;
+}
+
+.social-icons a.email:hover {
+  background: #ff5722;
+  color: #fff;
+}
+
+.social-icons a.linkedin:hover {
+  background: #0e76a8;
+  color: #fff;
+}
+
+.social-icons a.instagram:hover {
+  background: #e1306c;
+  color: #fff;
+}
+
+.social-icons a.facebook:hover {
+  background: #3b5998;
+  color: #fff;
+}
+
+/* Responsive for Connect Section */
+@media (max-width: 600px) {
+  .social-icons {
+    gap: 15px;
+  }
+  .social-icons a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}
