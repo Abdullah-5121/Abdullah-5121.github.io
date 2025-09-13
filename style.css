@@ -1,9 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+/* ===== Scrollbar Styling (like Android) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 195, 247, 0.7);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(3, 169, 244, 0.9);
+}
+
+/* For Firefox */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #4fc3f7 #0f2027;
 }
 
 body {
@@ -12,8 +33,6 @@ body {
   color: #e0e0e0;
   line-height: 1.6;
   overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 #0f2027;
   position: relative;
 }
 
@@ -189,7 +208,7 @@ a:hover {
   border-radius: 20px;
   max-width: 600px;
   margin: 40px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
@@ -237,24 +256,6 @@ a:hover {
 }
 .social-icons a[href*="facebook"]:hover { background: #1877F2; }
 
-/* ===== Scrollbar Styling (like Android) ===== */
-.case-studies-vertical::-webkit-scrollbar {
-  width: 6px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb {
-  background: rgba(79, 195, 247, 0.7);
-  border-radius: 6px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb:hover {
-  background: rgba(3, 169, 244, 0.9);
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   header {
@@ -277,6 +278,7 @@ a:hover {
     font-size: 1.3rem;
   }
 }
+
 /* ===== Mobile fix: header/profile (paste at end of style.css) ===== */
 @media (max-width: 768px) {
   header.hover-header {
