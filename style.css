@@ -12,9 +12,44 @@ body {
   color: #e0e0e0;
   line-height: 1.6;
   overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #4fc3f7 #0f2027;
   position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79, 195, 247, 0.7) transparent;
+}
+
+/* ===== Scrollbar (Webkit) ===== */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(79, 195, 247, 0.7);
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(3, 169, 244, 0.9);
+}
+
+.case-studies-vertical::-webkit-scrollbar {
+  width: 6px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb {
+  background: rgba(79, 195, 247, 0.7);
+  border-radius: 6px;
+}
+
+.case-studies-vertical::-webkit-scrollbar-thumb:hover {
+  background: rgba(3, 169, 244, 0.9);
 }
 
 /* Particle Background */
@@ -45,7 +80,6 @@ header {
 
 header:hover {
   transform: translateY(-5px) scale(1.02);
-  /* Faded background effect */
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
 }
@@ -147,7 +181,6 @@ section p:hover {
 
 .case-study:hover {
   transform: translateY(-5px) scale(1.02);
-  /* Faded background effect */
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
   border-radius: 30px;
@@ -203,7 +236,6 @@ a:hover {
 
 .connect-box:hover {
   transform: translateY(-5px) scale(1.02);
-  /* Faded background effect */
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
 }
@@ -255,25 +287,7 @@ a:hover {
   background: #1877F2;
 }
 
-/* ===== Scrollbar Styling (like Android) ===== */
-.case-studies-vertical::-webkit-scrollbar {
-  width: 6px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb {
-  background: rgba(79, 195, 247, 0.7);
-  border-radius: 6px;
-}
-
-.case-studies-vertical::-webkit-scrollbar-thumb:hover {
-  background: rgba(3, 169, 244, 0.9);
-}
-
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
@@ -316,7 +330,7 @@ a:hover {
   }
 }
 
-/* ===== Mobile fix: header/profile (paste at end of style.css) ===== */
+/* ===== Mobile fix: header/profile ===== */
 @media (max-width: 768px) {
   header.hover-header {
     flex-direction: column;
@@ -369,4 +383,23 @@ a:hover {
     transform: none !important;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
   }
+}
+
+/* ===== Android-style scroll behavior (hide scrollbar until scroll) ===== */
+.case-studies-vertical,
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79, 195, 247, 0.7) transparent;
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.case-studies-vertical::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.case-studies-vertical:hover::-webkit-scrollbar,
+body:hover::-webkit-scrollbar {
+  opacity: 1;
 }
