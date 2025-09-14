@@ -14,7 +14,6 @@ body {
   color: #e0e0e0;
   line-height: 1.6;
   overflow-x: hidden;
-  /* For Firefox */
   scrollbar-width: thin;
   scrollbar-color: #4fc3f7 transparent;
   position: relative;
@@ -48,7 +47,6 @@ header {
 
 header:hover {
   transform: translateY(-5px) scale(1.02);
-  /* Refined hover effect */
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
 }
@@ -112,18 +110,63 @@ section {
   animation: fadeIn 1.5s ease-in;
 }
 
-h2 {
+/* ====== Shared Section Headings (About, Case Study, Connect) ====== */
+.about-box h2,
+.case-box h2,
+.connect-box h2 {
   font-family: 'Poppins', sans-serif;
-  color: #00bcd4;
   font-size: 1.8rem;
+  color: #00bcd4;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-h2:hover {
-  transform: translateY(-5px) scale(1.05);
-  color: #4fc3f7;
-  cursor: default;
+.about-box h2 i,
+.case-box h2 i,
+.connect-box h2 i {
+  color: inherit;
+  text-shadow: none;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover over whole section → glow effect */
+.about-box:hover h2,
+.about-box:hover h2 i{
+  color: #ffffff;
+  text-shadow: 0 0 10px #000001, 0 0 20px #000305;
+}
+.case-box:hover h2,
+.case-box:hover h2 i{
+  color: #ffffff;
+  text-shadow: 0 0 10px #020002, 0 0 20px #040005;
+}
+.connect-box:hover h2,
+.connect-box:hover h2 i {
+  color: #ffffff;
+  text-shadow: 0 0 10px #000001, 0 0 20px #000305;
+}
+
+/* Hover directly on heading → lift text + icon */
+.about-box h2:hover{
+  transform: translateY(-5px);
+}
+.about-box h2:hover i{
+  transform: translateY(0px);
+}
+.case-box h2:hover{
+  transform: translateY(-5px);
+}
+.case-box h2:hover i{
+  transform: translateY(0px);
+}
+.connect-box h2:hover{
+  transform: translateY(-5px);
+}
+.connect-box h2:hover i {
+  transform: translateY(0px);
 }
 
 section p:hover {
@@ -152,7 +195,6 @@ section p:hover {
 
 .case-study:hover {
   transform: translateY(-5px) scale(1.02);
-  /* Refined hover effect */
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
   border-radius: 30px;
@@ -192,7 +234,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Connect Section */
+/* ================= Connect Section ================= */
 .connect-box {
   background: #111;
   display: flex;
@@ -209,18 +251,11 @@ a:hover {
 
 .connect-box:hover {
   transform: translateY(-5px) scale(1.02);
-  /* Refined hover effect */
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
 }
 
-.connect-box h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem;
-  color: #00bcd4;
-  margin-bottom: 10px;
-}
-
+/* Social Icons */
 .social-icons {
   display: flex;
   gap: 25px;
@@ -277,7 +312,7 @@ a:hover {
   }
 }
 
-/* ===== Mobile fix: header/profile (paste at end of style.css) ===== */
+/* ===== Mobile fix: header/profile ===== */
 @media (max-width: 768px) {
   header.hover-header {
     flex-direction: column;
