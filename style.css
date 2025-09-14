@@ -20,30 +20,29 @@ body {
   position: relative;
 }
 
-/* ===== WebKit Scrollbar Styling (Chrome, Edge, Safari) ===== */
-/* This makes the scrollbar "overlay" and appear only on scroll */
-::-webkit-scrollbar {
+/* Full page scrollbar - Chrome, Edge, Safari */
+body::-webkit-scrollbar {
   width: 6px;
-  background: transparent;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(79, 195, 247, 0.7);
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(79,195,247,0.7);
   border-radius: 6px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(3, 169, 244, 0.9);
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(3,169,244,0.9);
 }
 
-/* Hide the scrollbar buttons (arrows) */
-::-webkit-scrollbar-button {
-  display: none;
+/* Full page scrollbar - Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(79,195,247,0.7) linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  scrollbar-gutter: stable;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
 }
+
 
 /* Particle Background */
 #particles-js {
