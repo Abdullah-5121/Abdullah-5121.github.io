@@ -309,3 +309,14 @@ html {
   .header-text p { font-size: 1rem !important; margin: 0; color: #bbbbbb; }
   header.hover-header:hover { transform: none !important; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important; }
 }
+/* Particle Background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%; /* covers full page */
+  min-height: 100vh; /* ensures full viewport minimum */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
