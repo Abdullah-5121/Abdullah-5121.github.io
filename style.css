@@ -331,3 +331,26 @@ a:hover {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
   }
 }
+
+
+
+/* Style for heading icons */
+h2 i {
+  margin-right: 10px;
+  color: #00bcd4;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect for headings (icon + text) */
+h2:hover i {
+  color: #4fc3f7;
+  transform: scale(1.2);
+  text-shadow: 0 0 6px #4fc3f7, 0 0 12px #03a9f4;
+}
+
+/* Heading text hover to match icon */
+h2:hover {
+  color: #4fc3f7;
+  transform: translateY(-3px) scale(1.03);
+  cursor: default;
+}
