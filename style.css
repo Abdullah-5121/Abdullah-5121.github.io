@@ -242,7 +242,7 @@ a:hover {
 
 /* ===== Scrollbars ===== */
 
-/* Case Studies scrollbar */
+/* Case Studies scrollbar (unchanged) */
 .case-studies-vertical::-webkit-scrollbar {
   width: 6px;
   background: transparent;
@@ -278,9 +278,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Full page scrollbar - Firefox */
-body {
+html {
   scrollbar-width: thin;
   scrollbar-color: rgba(79,195,247,0.7) linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  scrollbar-gutter: stable;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
 }
 
 /* ===== Responsive ===== */
