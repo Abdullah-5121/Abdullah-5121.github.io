@@ -120,16 +120,16 @@ h2 {
   transition: color 0.3s ease;
 }
 
-/* Section Icons - Base colors (no glow) */
+/* Section Icons - Base colors match website (no glow) */
 h2.about i {
-  color: orange;
+  color: #e0e0e0; /* normal color, not orange */
   margin-right: 10px;
   transition: all 0.3s ease;
   text-shadow: none;
 }
 
 h2.casestudy i {
-  color: purple;
+  color: #e0e0e0; /* normal color, not purple */
   margin-right: 10px;
   transition: all 0.3s ease;
   text-shadow: none;
@@ -138,19 +138,12 @@ h2.casestudy i {
 /* Glow and color change only on section hover */
 section.about:hover h2.about i {
   text-shadow: 0 0 15px orange, 0 0 25px #ffb74d;
-  color: #ffb74d;
+  color: orange;
 }
 
 section.casestudy:hover h2.casestudy i {
   text-shadow: 0 0 15px purple, 0 0 25px #ba68c8;
-  color: #ba68c8;
-}
-
-/* Paragraph hover color inside sections */
-section p:hover {
-  transform: translateY(0) scale(1); /* No movement */
-  color: #a0e0ff;
-  cursor: default;
+  color: purple;
 }
 
 /* Case Studies */
