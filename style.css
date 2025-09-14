@@ -269,12 +269,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #888; /* color of the thumb */
+  background-color: rgba(79,195,247,0.7);
   border-radius: 6px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #555; /* color of the thumb on hover */
+  background-color: rgba(3,169,244,0.9);
 }
 
 /* Full page scrollbar - Firefox */
