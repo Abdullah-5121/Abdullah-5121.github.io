@@ -266,6 +266,8 @@ a:hover {
 body::-webkit-scrollbar {
   width: 6px;
   background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  /*Change*/
+  scrollbar-color: rgba(79,195,247,0.7) transparent;
 }
 
 body::-webkit-scrollbar-thumb {
