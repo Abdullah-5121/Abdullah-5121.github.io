@@ -120,27 +120,29 @@ h2 {
   transition: color 0.3s ease;
 }
 
-/* Section Icons - Orange for About Me, Purple for Case Studies */
+/* Section Icons - Base colors (no glow) */
 h2.about i {
   color: orange;
   margin-right: 10px;
   transition: all 0.3s ease;
+  text-shadow: none;
 }
 
 h2.casestudy i {
   color: purple;
   margin-right: 10px;
   transition: all 0.3s ease;
+  text-shadow: none;
 }
 
-/* Glow effect on hover over section (without moving) */
+/* Glow and color change only on section hover */
 section.about:hover h2.about i {
-  text-shadow: 0 0 12px orange, 0 0 20px #ffb74d;
+  text-shadow: 0 0 15px orange, 0 0 25px #ffb74d;
   color: #ffb74d;
 }
 
 section.casestudy:hover h2.casestudy i {
-  text-shadow: 0 0 12px purple, 0 0 20px #ba68c8;
+  text-shadow: 0 0 15px purple, 0 0 25px #ba68c8;
   color: #ba68c8;
 }
 
@@ -362,20 +364,3 @@ a:hover {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
   }
 }
-/* Glow effect on hover over section (without moving) */
-section.about:hover h2.about i {
-  text-shadow: 0 0 15px orange, 0 0 25px #ffb74d;
-  color: #ffb74d;
-}
-
-section.casestudy:hover h2.casestudy i {
-  text-shadow: 0 0 15px purple, 0 0 25px #ba68c8;
-  color: #ba68c8;
-}
-
-/* Prevent lifting or movement of icons */
-h2.about i,
-h2.casestudy i {
-  transform: none !important;
-}
-
