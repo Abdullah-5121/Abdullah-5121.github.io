@@ -1,0 +1,31 @@
+| **Column**        | **Meaning**                                               |                           
+| ----------------- | --------------------------------------------------------- |
+| `Id`              | Unique ID for each player record                          |                 
+| `groupId`         | ID representing the player’s team/group                   |                  
+| `matchId`         | Unique ID for each match                                  |
+| `assists`         | Number of enemies the player helped kill                  |
+| `boosts`          | Number of boost items (energy drinks, painkillers) used   | 
+| `damageDealt`     | Total damage the player dealt to others                   | 
+| `DBNOs`           | “Down But Not Out” count — enemies knocked but not killed | 
+| `headshotKills`   | Kills achieved with a headshot                            | 
+| `heals`           | Number of healing items used                              | 
+| `killPlace`       | Player’s rank in kills in the match                       | 
+| `killPoints`      | Ranking points based on kills                             | 
+| `kills`           | Total number of kills                                     | 
+| `killStreaks`     | Maximum kills in a short time                             | 
+| `longestKill`     | Distance (in meters) of the longest kill                  | 
+| `matchDuration`   | Duration (in seconds) of the match                        | 
+| `matchType`       | Type of match (solo, duo, squad, etc.)                    | 
+| `maxPlace`        | Highest possible placement (number of ranks in match)     | 
+| `numGroups`       | Number of groups (teams) in the match                     | 
+| `rankPoints`      | Ranking score based on match outcome                      | 
+| `revives`         | Number of times player revived teammates                  | 
+| `rideDistance`    | Distance traveled in vehicles (meters)                    | 
+| `roadKills`       | Number of kills using a vehicle                           | 
+| `swimDistance`    | Distance traveled swimming                                | 
+| `teamKills`       | Kills on teammates (friendly fire)                        | 
+| `vehicleDestroys` | Number of vehicles destroyed                              | 
+| `walkDistance`    | Distance traveled on foot (meters)                        |
+| `weaponsAcquired` | Number of weapons picked up                               | 
+| `winPoints`       | Ranking score based on wins                               | 
+| `winPlacePerc`    | **Win placement percentage** (0 = worst, 1 = best)        | 

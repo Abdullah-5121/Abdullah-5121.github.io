@@ -1,118 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M. Abdullah | Data Analyst Portfolio</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio M Abdullah</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  
-  <!-- Style -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
 
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
-<body class="dark-mode">
 
-  <!-- Particle Background -->
-  <div id="particles-js"></div>
+<body class="index-page">
 
-  <!-- Dark/Light Toggle -->
-  <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
 
-  <!-- Header -->
-  <header>
-    <div class="header-content">
-      <img src="Mie_Pic.jpg" alt="M. Abdullah" class="profile-pic">
-      <div class="header-text">
-        <h1>M. Abdullah</h1>
-        <p>Data Analyst | R • SQL • Tableau</p>
-      </div>
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
     </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <img src="assets/img/favicon.png" alt="icon">
+      <h1 class="sitename">M ABDULLAH</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="mailto:mabdullahpro437@gmail.com" class="social-icon-link"><i class="bi bi-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/mabdullahckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-linkedin"></i></a>           
+      <a href="https://www.facebook.com/share/1Ea6cTcDEr/" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-facebook"></i></a>          
+      <a href="https://www.instagram.com/mabdullah_ckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-instagram"></i></a> 
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Case Studies</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
   </header>
 
-  <!-- About Me -->
-  <section class="about-box">
-    <h2><i class="fas fa-user-circle"></i> About Me</h2>
-    <p>I’m a data analyst passionate about turning data into actionable insights. This site showcases my projects, skills, and experience using R, Tableau, and more.</p>
-  </section>
+  <main class="main">
 
-  <!-- Case Studies -->
-  <section class="case-box">
-    <h2><i class="fas fa-briefcase"></i> Case Studies</h2>
-    <div class="case-studies-vertical">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
 
-      <!-- Cyclistic Case Study -->
-      <div class="case-study">
-        <h3><i class="fas fa-bicycle"></i> Cyclistic Bike-Share User Behavior Analysis</h3>
-        <p>A case study analyzing ride behavior differences between annual members and casual riders using R and Tableau.</p>
-        <ul>
-          <li><strong>Data Source:</strong> Cyclistic Dataset 
-            <a href="https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090" target="_blank">2019</a> and 
-            <a href="https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855" target="_blank">2020</a>
-          </li>
-          <li><strong>Tools:</strong> R, dplyr, lubridate, Tableau, PowerPoint</li>
-          <li><a href="https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/CyclisticDataset_17539250254980/Dashboard1" target="_blank"><i class="fas fa-chart-line"></i> Tableau Dashboard</a></li>
-          <li><a href="01_Cyclistic_Rides/02_Presentation/01_Casestudy-1_Report.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Final Presentation PDF</a></li>
-          <li><a href="01_Cyclistic_Rides/01_R-Work/cyclistic_analysis.R" target="_blank"><i class="fas fa-file-code"></i> R Script</a></li>
-          <li><a href="01_Cyclistic_Rides/summary(Final).csv" target="_blank"><i class="fas fa-database"></i> Summary Dataset</a></li>
-          <li><strong>GitHub Files:</strong> <a href="https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/01_Cyclistic_Rides" target="_blank"><i class="fab fa-github"></i> Visit project folder</a></li>
-        </ul>
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>M ABDULLAH</h2>
+        <p>I'm <span class="typed" data-typed-items="Data Analyst, R | SQL Expert , Tableau Visualizer">Data Analyst</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
-      <!-- Superstore Case Study -->
-      <div class="case-study">
-        <h3><i class="fas fa-store"></i> Superstore Sales & Profitability Analysis</h3>
-        <p>A case study analyzing Superstore dataset across segments, categories, regions, and shipping modes.</p>
-        <ul>
-          <li><strong>Data Source:</strong> Superstore <a href="https://www.kaggle.com/datasets/vivek468/superstore-dataset-final?" target="_blank"><i class="fas fa-database"></i> Dataset</a></li>
-          <li><strong>Tools:</strong> R, ggplot2, Tableau , Powerpoint</li>
-          <li><a href="https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/SuperStoreDatasetVisualization/Dashboard1" target="_blank"><i class="fas fa-chart-line"></i> Tableau Dashboard</a></li>
-          <li><a href="02_SuperStore/02_Presentation/SuperStore Presentation.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Final Presentation PDF</a></li>
-          <li><a href="02_SuperStore/01_R Work/SuperStore Dataset ( Cleaning + Analysis + Visualization).R" target="_blank"><i class="fas fa-file-code"></i> R Script</a></li>
-          <li><a href="02_SuperStore/Cleaned_Superstore.csv" target="_blank"><i class="fas fa-database"></i> Cleaned Dataset</a></li>
-          <li><strong>GitHub Files:</strong> <a href="https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/02_SuperStore" target="_blank"><i class="fab fa-github"></i> Visit project folder</a></li>
-        </ul>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>I am a passionate Data Analyst with hands-on experience in cleaning, analyzing, and visualizing data to uncover meaningful insights. Skilled in tools like Excel, SQL, R, and Tableau, I focus on transforming raw data into actionable strategies that drive decision-making. I have completed multiple case studies and projects that demonstrate my ability to handle real-world datasets and communicate findings effectively.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Data Analyst </h2>
+            <p class="fst-italic py-3">
+             Skilled in data cleaning, analysis, and visualization using Excel, SQL, R, and Tableau. Experienced in uncovering insights from real-world datasets through hands-on projects and case studies. Certified in Google Data Analytics, with a strong focus on turning data into actionable business decisions.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birth Date:</strong> <span>28 Dec 2005</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+92 3185995842</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chakwal, Pakistan</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Undergraduate CS</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>mabdullahpro437@gmail.com</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              Proficient in applying statistical techniques and structured problem-solving to drive data-informed strategies. Adept at creating interactive dashboards and reports that simplify complex insights for stakeholders.
+            </p>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Fitbits Consumer -->
-      <div class="case-study">
-        <h3><i class="fas fa-store"></i> Fitbit Users Behaviour Analysis</h3>
-        <p>A case study analyzing Fitbit user data to segment users by activity level, identify weekly behavior patterns, and provide data-driven marketing recommendations to Bellabeat.</p>
-        <ul>
-          <li><strong>Data Source:</strong> Fitbit Fitness Tracker <a href="https://www.kaggle.com/datasets/arashnic/fitbit?select=mturkfitbit_export_4.12.16-5.12.16" target="_blank"><i class="fas fa-database"></i> Dataset</a></li>
-          <li><strong>Tools:</strong>  R, Tableau, PowerPoint</li>
-          <li><a href="https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/FitbeatsDataset/Dashboard3#1" target="_blank"><i class="fas fa-chart-line"></i> Tableau Dashboard</a></li>
-          <li><a href="03_Fitbit_Consumers/03_Presentation/Final_Presentation_Fitbits_Dataset.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Final Presentation PDF</a></li>
-          <li><a href="03_Fitbit_Consumers/02_R_Work/02_Fitbit(Cleaning+Analysis).R" target="_blank"><i class="fas fa-file-code"></i> R Script</a></li>
-          <li><a href="03_Fitbit_Consumers/01_daily_activity_cleaned.csv" target="_blank"><i class="fas fa-database"></i> Cleaned Dataset</a></li>
-          <li><strong>GitHub Files:</strong> <a href="https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/c10597bf06befc3c9e4515f9fea4cb404824ca60/03_Fitbit_Consumers" target="_blank"><i class="fab fa-github"></i> Visit project folder</a></li>
-        </ul>
+    </section><!-- /About Section -->
+
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Focused on transforming complex data into clear, actionable insights that drive informed decisions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Excel</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Google Sheets</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>SQL</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>R</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Tableau</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Power Point</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
       </div>
 
-    </div>
-  </section>
+    </section><!-- /Skills Section -->
 
-  <!-- Connect Section -->
-<section id="connect">
-  <div class="connect-box">
-    <h2>
-      <i class="fas fa-link connect-icon"></i> Connect
-    </h2>
-    <div class="social-icons">
-      <a href="mailto:mabdullapro437@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/mabdullahckl" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/mabdullah_ckl" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/share/1Ea6cTcDEr/" target="_blank"><i class="fab fa-facebook"></i></a>
-    </div>
-  </div>
-</section>
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Detail-oriented Data Analyst with expertise in data cleaning, visualization, and reporting using R, SQL,  and Tableau. Skilled in deriving insights from complex datasets and building interactive dashboards. Certified in Google Data Analytics.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>M ABDULLAH</h4>
+              <p><em>I am a passionate Data Analyst who has completed multiple real-world projects, including case studies and interactive dashboards in Tableau. Through these projects, I’ve gained hands-on experience in analyzing large datasets, uncovering insights, and presenting results that support strategic decisions. I also hold the Google Data Analytics Certificate, validating my practical expertise.</em></p>
+              <ul>
+                <li><i class="fa-solid fa-location-dot "></i> Chakwal, Punjab, Pakistan</li>
+                <li><i class="fa-solid fa-phone " ></i> +92 3175995842</li>
+                <li><i class="fa-solid fa-envelope "></i> mabdullahpro437@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          
+            <div class="resume-item">
+              <h4>Bachelor of Computer Science</h4>
+              <h5>2024 - 2028</h5>
+              <p><em>University of Chakwal</em></p>
+              <p>I believe in learning by doing, embracing challenges as opportunities to grow. Guided by curiosity and analytical thinking, I explore ideas and projects that turn raw information into meaningful insights. Even when obstacles arise, I focus on understanding and solving problems with clarity and creativity.</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Junior Data Analyst</h4>
+              <ul>
+                <li>Successfully completed multiple data analytics case studies, including Cyclistic, Superstore, Fitbit, and PUBG, applying real-world problem-solving techniques.</li>
+                <li>Worked with large-scale datasets, such as the PUBG dataset with 6.4 million rows, performing data cleaning, transformation, and analysis efficiently. </li>
+                <li>Created interactive dashboards and visualizations in Tableau to uncover trends, patterns, and actionable insights for business decision-making.</li>
+                <li>Applied statistical analysis and structured problem-solving to generate meaningful reports and recommendations.</li>
+                <li>Gained practical experience in handling end-to-end analytics workflows, from data preprocessing to presenting findings.</li>
+                <li>Collaborated with datasets from diverse domains to identify trends, anomalies, and performance metrics that support strategic insights.</li>
+                <li>Leveraged tools like Excel, SQL, Power Point, and Tableau to implement efficient data workflows, ensuring accurate and visually compelling results.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Case Study Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Case Studies</h2>
+        <p>Explore my hands-on projects where I analyzed real-world datasets and created actionable insights. These case studies demonstrate my ability to transform data into meaningful visualizations and reports.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">projects</li>
+            <!-- <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Product</li>
+            <li data-filter=".filter-branding">Branding</li>
+            <li data-filter=".filter-books">Books</li>  
+          End Portfolio Filters--> 
+          </ul> 
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/casestudy1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Project 1</h4>
+                  <p>Analyzed Cyclistic rides to uncover user behavior insights</p>
+                  <a href="assets/img/portfolio/casestudy1.jpg" title="Project 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/project htmls/01_cyclistic-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/casestudy2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Project 2</h4>
+                  <p>Analyzed Superstore sales data to identify trends</p>
+                  <a href="assets/img/portfolio/casestudy2.jpg" title="Project 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/project htmls/02_superstore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/casestudy3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Project 3</h4>
+                  <p>Explored Fitbit data to track health and activity trends effectively</p>
+                  <a href="assets/img/portfolio/casestudy3.jpg" title="Project 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/project htmls/03_fitbit-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/casestudy4.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Project 4</h4>
+                  <p>Analyzed PUBG dataset (6.4M rows) to uncover player performance patterns.</p>
+                  <a href="assets/img/portfolio/casestudy4.jpg" title="Project 4" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/project htmls/04_pubg-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations, data projects, or any opportunities to turn insights into impact.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+          <div class="info-wrap contact-icons-wrap">
+            <a href="mailto:mabdullahpro437@gmail.com" class="social-icon-link"><i class="bi bi-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/mabdullahckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-linkedin"></i></a>           
+            <a href="https://www.facebook.com/share/1Ea6cTcDEr/" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-facebook"></i></a>          
+            <a href="https://www.instagram.com/mabdullah_ckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-instagram"></i></a>           
+          </div>
+        </div>
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
