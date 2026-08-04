@@ -8,14 +8,13 @@ const GITHUB_REPO = "Abdullah-5121/Abdullah-5121.github.io";
 const GITHUB_BRANCH = "main";
 
 function nbviewerLink(path){
-  // Accepts either a repo-relative path ("05_x/file.ipynb") or a full
-  // GitHub blob URL (https://github.com/<repo>/blob/<branch>/<path>).
-  // Normalizing here means it never matters which format gets pasted
-  // into the admin tool — it can't silently produce a broken nbviewer URL.
+  // GitHub renders .ipynb files natively in the blob view — no third-party
+  // service, no propagation/cache lag, always in sync with the repo.
+  // Still accepts either a repo-relative path or a full GitHub blob URL.
   const marker = `/blob/${GITHUB_BRANCH}/`;
   const markerIndex = path.indexOf(marker);
   const relPath = markerIndex !== -1 ? path.slice(markerIndex + marker.length) : path;
-  return `https://nbviewer.org/github/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${relPath}`;
+  return `https://github.com/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${relPath}`;
 }
 
 const PROJECTS = [
@@ -273,8 +272,6 @@ const PROJECTS = [
     ],
     finding: "Overwork (>250 monthly hours across 6+ projects) and career stagnation (low salary tiers with zero promotions in 5 years) drove the highest rates of employee churn. Mid-tenure employees between 3 to 5 years were the most vulnerable to voluntary departure",
     recommendation: "Cap monthly work hours at 200, restrict project assignments to 3–5 per employee, and establish clear 3-year career promotion pathways. Re-evaluate compensation for stagnated low-salary roles and integrate the Random Forest model into HR workflows for proactive quarterly stay interviews",
-    // Direct GitHub raw / blob view fallback
-
     notebook: "05_Salifort_Motors/00_salifort_motors_py.ipynb",
     links: {
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/salifort-employee-churn-prediction",

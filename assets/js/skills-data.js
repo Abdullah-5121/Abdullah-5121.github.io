@@ -147,5 +147,5 @@ SKILL_PERCENT["lubridate"] = SKILL_PERCENT["r"];
 SKILL_PERCENT["dplyr"] = SKILL_PERCENT["r"];
 
 function skillPercentFor(name){
-  return SKILL_PERCENT[(name || "").toLowerCase()] || 76;
+  return SKILL_PERCENT[(name || "").toLowerCase()] || 85;
 }
