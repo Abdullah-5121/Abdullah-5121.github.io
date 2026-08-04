@@ -1,388 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio M Abdullah</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Abdullah — Data Analyst &amp; Data Scientist</title>
+<meta name="description" content="Portfolio of M. Abdullah — Data Analyst &amp; Data Scientist. Case studies, dashboards, and Kaggle notebooks in R, SQL, Python and Tableau.">
+<meta name="keywords" content="data analyst, data scientist, portfolio, tableau, sql, r, python, kaggle, chakwal, pakistan">
+<link rel="icon" href="assets/img/favicon.png">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="index-page">
+<div id="preloader"><div class="load-cell">In [1]: loading_portfolio()</div></div>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="brand"><img src="assets/img/favicon.png" alt=""><span>abdullah<span class="brk">.</span>py</span></a>
 
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <img src="assets/img/favicon.png" alt="icon">
-      <h1 class="sitename">M ABDULLAH</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="mailto:mabdullahpro437@gmail.com" class="social-icon-link"><i class="bi bi-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/mabdullahckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-linkedin"></i></a>           
-      <a href="https://www.facebook.com/share/1Ea6cTcDEr/" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-facebook"></i></a>          
-      <a href="https://www.instagram.com/mabdullah_ckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-instagram"></i></a> 
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Case Studies</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
+    <nav class="nav-links" id="nav-links">
+      <a href="#hero" class="active"><span class="idx">01</span>Home</a>
+      <a href="#about"><span class="idx">02</span>About</a>
+      <a href="#skills"><span class="idx">03</span>Skills</a>
+      <a href="#projects"><span class="idx">04</span>Projects</a>
+      <a href="#resume"><span class="idx">05</span>Resume</a>
+      <a href="#contact"><span class="idx">06</span>Contact</a>
     </nav>
 
-  </header>
+    <div class="nav-cta">
+      <div class="nav-social">
+        <a href="mailto:mabdullahpro437@gmail.com" data-social="email" aria-label="Email"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/mabdullahckl" data-social="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Abdullah-5121" data-social="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.kaggle.com/mabdullah5121" data-social="kaggle" target="_blank" rel="noopener noreferrer" aria-label="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
 
-  <main class="main">
+<main>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-kicker"><span class="bar"></span><span data-field="hero.kicker">CHAKWAL, PAKISTAN — AVAILABLE FOR FREELANCE</span></div>
+        <h1><span data-field="hero.firstName">Muhammad</span> <span class="grad" data-field="hero.lastName">Abdullah</span></h1>
+        <div class="hero-role mono">I'm a <span id="typed-role"></span><span class="caret"></span></div>
+        <p class="hero-desc" data-field="hero.description">I turn messy, real-world datasets into dashboards, models and stories that hold up under questions — using R, SQL, Python and Tableau, with a Google Data Analytics certification behind the workflow.</p>
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><i class="bi bi-grid-1x2"></i> View Projects</a>
+          <a href="#contact" class="btn btn-ghost"><i class="bi bi-send"></i> Get in Touch</a>
+        </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>M ABDULLAH</h2>
-        <p>I'm <span class="typed" data-typed-items="Data Analyst, R | SQL Expert , Tableau Visualizer">Data Analyst</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <div class="hero-stats" id="hero-stats"></div>
       </div>
 
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>I am a passionate Data Analyst with hands-on experience in cleaning, analyzing, and visualizing data to uncover meaningful insights. Skilled in tools like Excel, SQL, R, and Tableau, I focus on transforming raw data into actionable strategies that drive decision-making. I have completed multiple case studies and projects that demonstrate my ability to handle real-world datasets and communicate findings effectively.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Data Analyst </h2>
-            <p class="fst-italic py-3">
-             Skilled in data cleaning, analysis, and visualization using Excel, SQL, R, and Tableau. Experienced in uncovering insights from real-world datasets through hands-on projects and case studies. Certified in Google Data Analytics, with a strong focus on turning data into actionable business decisions.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birth Date:</strong> <span>28 Dec 2005</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+92 3175995842</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chakwal, Pakistan</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Undergraduate CS</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>mabdullahpro437@gmail.com</span></li>
-                </ul>
-              </div>
+      <div class="hero-panel reveal">
+        <div class="hero-panel-bar">
+          <span class="dot" style="background:#ff5f56"></span>
+          <span class="dot" style="background:#ffbd2e"></span>
+          <span class="dot" style="background:#27c93f"></span>
+          <span>profile.ipynb</span>
+        </div>
+        <div class="hero-panel-body">
+          <pre><span class="ln">1</span><span class="k">class</span> <span class="f">Abdullah</span>:
+<span class="ln">2</span>    <span class="f">role</span> = <span class="s">"Data Analyst / Data Scientist"</span>
+<span class="ln">3</span>    <span class="f">based_in</span> = <span class="s">"Chakwal, Pakistan"</span>
+<span class="ln">4</span>    <span class="f">studying</span> = <span class="s">"BS Computer Science"</span>
+<span class="ln">5</span>    <span class="f">stack</span> = [<span class="s">"R"</span>, <span class="s">"SQL"</span>, <span class="s">"Python"</span>, <span class="s">"Tableau"</span>]
+<span class="ln">6</span>    <span class="c"># certified in Google Data Analytics</span></pre>
+          <div class="hero-panel-out">
+            <span class="tag">Out[1]:</span>
+            <div class="hero-chips">
+              <span class="chip">Data Cleaning</span>
+              <span class="chip">Statistical Analysis</span>
+              <span class="chip amber">Dashboards</span>
+              <span class="chip">EDA</span>
+              <span class="chip amber">Kaggle Notebooks</span>
             </div>
-            <p class="py-3">
-              Proficient in applying statistical techniques and structured problem-solving to drive data-informed strategies. Adept at creating interactive dashboards and reports that simplify complex insights for stakeholders.
-            </p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal" id="about-head">
+        <div class="cell-tag"><b>In [2]:</b> about.summary()</div>
+        <h2>About Me</h2>
+        <p>The short version of how I work — and the facts that don't fit in a headline.</p>
       </div>
 
-    </section><!-- /About Section -->
-
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Focused on transforming complex data into clear, actionable insights that drive informed decisions.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Excel</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Google Sheets</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>SQL</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>R</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Tableau</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Power Point</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <img src="assets/img/my-profile-img.jpg" alt="M. Abdullah" data-field-src="about.photo">
+          <span class="about-badge mono" data-field="about.badge">status: open_to_work</span>
         </div>
 
+        <div class="about-body reveal">
+          <div id="about-text"></div>
+
+          <ul class="about-facts" id="about-facts"></ul>
+
+          <a href="#resume" class="btn btn-ghost btn-sm"><i class="bi bi-file-earmark-text"></i> See full resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal" id="skills-head">
+        <h2>Skills &amp; Tools</h2>
+        <p>What I reach for, grouped by the job it does — from raw query to finished story.</p>
       </div>
 
-    </section><!-- /Skills Section -->
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal" id="projects-head">
+        <h2>Projects</h2>
+        <p>Split into two shelves: dashboard-driven analytics case studies, and code-first data science notebooks published on Kaggle.</p>
+      </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="tabs reveal" role="tablist" aria-label="Filter projects">
+        <button class="tab-btn active" data-filter="all">All</button>
+        <button class="tab-btn" data-filter="data-science">Data Science &amp; Notebooks</button>
+        <button class="tab-btn" data-filter="analytics">Analytics Case Studies</button>
+      </div>
+
+      <div class="project-grid" id="project-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ RESUME ============ -->
+  <section id="resume">
+    <div class="container">
+      <div class="section-head reveal" id="resume-head">
         <h2>Resume</h2>
-        <p>Detail-oriented Data Analyst with expertise in data cleaning, visualization, and reporting using R, SQL,  and Tableau. Skilled in deriving insights from complex datasets and building interactive dashboards. Certified in Google Data Analytics.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>M ABDULLAH</h4>
-              <p><em>I am a passionate Data Analyst who has completed multiple real-world projects, including case studies and interactive dashboards in Tableau. Through these projects, I’ve gained hands-on experience in analyzing large datasets, uncovering insights, and presenting results that support strategic decisions. I also hold the Google Data Analytics Certificate, validating my practical expertise.</em></p>
-              <ul>
-                <li><i class="fa-solid fa-location-dot "></i> Chakwal, Punjab, Pakistan</li>
-                <li><i class="fa-solid fa-phone " ></i> +92 3175995842</li>
-                <li><i class="fa-solid fa-envelope "></i> mabdullahpro437@gmail.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          
-            <div class="resume-item">
-              <h4>Bachelor of Computer Science</h4>
-              <h5>2024 - 2028</h5>
-              <p><em>University of Chakwal</em></p>
-              <p>I believe in learning by doing, embracing challenges as opportunities to grow. Guided by curiosity and analytical thinking, I explore ideas and projects that turn raw information into meaningful insights. Even when obstacles arise, I focus on understanding and solving problems with clarity and creativity.</p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Junior Data Analyst</h4>
-              <ul>
-                <li>Successfully completed multiple data analytics case studies, including Cyclistic, Superstore, Fitbit, and PUBG, applying real-world problem-solving techniques.</li>
-                <li>Worked with large-scale datasets, such as the PUBG dataset with 6.4 million rows, performing data cleaning, transformation, and analysis efficiently. </li>
-                <li>Created interactive dashboards and visualizations in Tableau to uncover trends, patterns, and actionable insights for business decision-making.</li>
-                <li>Applied statistical analysis and structured problem-solving to generate meaningful reports and recommendations.</li>
-                <li>Gained practical experience in handling end-to-end analytics workflows, from data preprocessing to presenting findings.</li>
-                <li>Collaborated with datasets from diverse domains to identify trends, anomalies, and performance metrics that support strategic insights.</li>
-                <li>Leveraged tools like Excel, SQL, Power Point, and Tableau to implement efficient data workflows, ensuring accurate and visually compelling results.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-        </div>
-
+        <p>Education and hands-on experience, in order.</p>
       </div>
 
-    </section><!-- /Resume Section -->
-
-    <!-- Case Study Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Case Studies</h2>
-        <p>Explore my hands-on projects where I analyzed real-world datasets and created actionable insights. These case studies demonstrate my ability to transform data into meaningful visualizations and reports.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">projects</li>
-            <!-- <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>  
-          End Portfolio Filters--> 
-          </ul> 
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/casestudy1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Project 1</h4>
-                  <p>Analyzed Cyclistic rides to uncover user behavior insights</p>
-                  <a href="assets/img/portfolio/casestudy1.jpg" title="Project 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="assets/project htmls/01_cyclistic-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/casestudy2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Project 2</h4>
-                  <p>Analyzed Superstore sales data to identify trends</p>
-                  <a href="assets/img/portfolio/casestudy2.jpg" title="Project 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="assets/project htmls/02_superstore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/casestudy3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Project 3</h4>
-                  <p>Explored Fitbit data to track health and activity trends effectively</p>
-                  <a href="assets/img/portfolio/casestudy3.jpg" title="Project 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="assets/project htmls/03_fitbit-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/casestudy4.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Project 4</h4>
-                  <p>Analyzed PUBG dataset (6.4M rows) to uncover player performance patterns.</p>
-                  <a href="assets/img/portfolio/casestudy4.jpg" title="Project 4" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="assets/project htmls/04_pubg-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Feel free to reach out for collaborations, data projects, or any opportunities to turn insights into impact.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-          <div class="info-wrap contact-icons-wrap">
-            <a href="mailto:mabdullahpro437@gmail.com" class="social-icon-link"><i class="bi bi-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/mabdullahckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-linkedin"></i></a>           
-            <a href="https://www.facebook.com/share/1XDCBRft6u/" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-facebook"></i></a>          
-            <a href="https://www.instagram.com/mabdullah_ckl" target="_blank" rel="noopener noreferrer" class="social-icon-link"><i class="bi bi-instagram"></i></a>           
+      <div class="resume-grid">
+        <div class="resume-col reveal">
+          <h3><i class="bi bi-mortarboard"></i> Education</h3>
+          <div class="timeline" id="edu-timeline"></div>
+          <div class="cert-card" id="cert-card">
+            <i class="bi bi-patch-check-fill"></i>
+            <div>
+              <h5>Google Data Analytics Professional Certificate</h5>
+              <span>Foundational analytics certification</span>
+            </div>
           </div>
         </div>
+
+        <div class="resume-col reveal">
+          <h3><i class="bi bi-briefcase"></i> Experience</h3>
+          <div class="timeline" id="exp-timeline"></div>
         </div>
       </div>
-    </section><!-- /Contact Section -->
+    </div>
+  </section>
 
-  </main>
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal" id="contact-head">
+        <h2>Let's Work Together</h2>
+        <p>Open to freelance data analysis / data science work, collaborations, and interesting datasets.</p>
+      </div>
 
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-list" id="contact-list"></div>
+        </div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/mabdullahpro437@gmail.com" method="POST" data-form-endpoint>
+          <input type="hidden" name="_subject" value="New message from portfolio site">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="Name" required placeholder="Your name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" required placeholder="you@example.com">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject" placeholder="What's this about?">
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="5" required placeholder="Tell me about your project or question…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Send Message</button>
+          <p class="form-status" id="form-status"></p>
+          <p class="form-note">Sent directly to my inbox — no account or sign-in needed on your end.</p>
+        </form>
+      </div>
+    </div>
+  </section>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+</main>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<footer class="footer">
+  <div class="container">
+    <div class="fs">
+      <a href="mailto:mabdullahpro437@gmail.com" data-social="email" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/mabdullahckl" data-social="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Abdullah-5121" data-social="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://www.kaggle.com/mabdullah5121" data-social="kaggle" target="_blank" rel="noopener noreferrer" aria-label="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+      <a href="https://www.instagram.com/mabdullah_ckl" data-social="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+    <p>© <span id="year"></span> <span data-field="footer.name">Muhammad Abdullah</span> — <span data-field="footer.note">built with a notebook cell in mind.</span></p>
+  </div>
+</footer>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<a href="#hero" class="scroll-top" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></a>
 
+<script src="assets/js/site-content.js"></script>
+<script src="assets/js/skills-data.js"></script>
+<script src="assets/js/projects-data.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
