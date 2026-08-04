@@ -8,7 +8,14 @@ const GITHUB_REPO = "Abdullah-5121/Abdullah-5121.github.io";
 const GITHUB_BRANCH = "main";
 
 function nbviewerLink(path){
-  return `https://nbviewer.org/github/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${path}`;
+  // Accepts either a repo-relative path ("05_x/file.ipynb") or a full
+  // GitHub blob URL (https://github.com/<repo>/blob/<branch>/<path>).
+  // Normalizing here means it never matters which format gets pasted
+  // into the admin tool — it can't silently produce a broken nbviewer URL.
+  const marker = `/blob/${GITHUB_BRANCH}/`;
+  const markerIndex = path.indexOf(marker);
+  const relPath = markerIndex !== -1 ? path.slice(markerIndex + marker.length) : path;
+  return `https://nbviewer.org/github/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${relPath}`;
 }
 
 const PROJECTS = [
@@ -58,7 +65,7 @@ const PROJECTS = [
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/CyclisticDataset_17539250254980/Dashboard1",
       presentation: "01_Cyclistic_Rides/02_Presentation/01_Casestudy-1_Report.pdf",
       dataset: "01_Cyclistic_Rides/summary(Final).csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/48be586841b70dace5c03b67e424f17bd464a9e4/01_Cyclistic_Rides"
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/01_Cyclistic_Rides"
     }
   },
   {
@@ -108,7 +115,7 @@ const PROJECTS = [
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/SuperStoreDatasetVisualization/Dashboard1",
       presentation: "02_SuperStore/02_Presentation/SuperStore Presentation.pdf",
       dataset: "02_SuperStore/Cleaned_Superstore.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/0a22f15043b0ea1d29acde2b1068e5c6e0b9740f/02_SuperStore"
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/02_SuperStore"
     }
   },
   {
@@ -163,7 +170,7 @@ const PROJECTS = [
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/FitbeatsDataset/Dashboard3#1",
       presentation: "03_Fitbit_Consumers/03_Presentation/Final_Presentation_Fitbits_Dataset.pdf",
       dataset: "03_Fitbit_Consumers/01_daily_activity_cleaned.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/52605f03017504d97ab0285317ce520f8e634eb2/03_Fitbit_Consumers"
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/03_Fitbit_Consumers"
     }
   },
   {
@@ -218,7 +225,7 @@ const PROJECTS = [
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/Pubg_Dataset/Final_Dashboard",
       presentation: "04_Pubg/03_Presentation/PUBG_DATASET_PRESENTATION.pdf",
       dataset: "04_Pubg/cleaned_pubg_dataset_Tableau.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/0719a253d23a41876b6e1da401415963671a6661/04_Pubg"
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/04_Pubg"
     }
   },
   {
@@ -266,8 +273,7 @@ const PROJECTS = [
     ],
     finding: "Overwork (>250 monthly hours across 6+ projects) and career stagnation (low salary tiers with zero promotions in 5 years) drove the highest rates of employee churn. Mid-tenure employees between 3 to 5 years were the most vulnerable to voluntary departure",
     recommendation: "Cap monthly work hours at 200, restrict project assignments to 3–5 per employee, and establish clear 3-year career promotion pathways. Re-evaluate compensation for stagnated low-salary roles and integrate the Random Forest model into HR workflows for proactive quarterly stay interviews",
-    // Direct GitHub raw / blob view fallback
-    notebook: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/blob/main/05_Salifort_Motors/00_salifort_motors_py.ipynb",
+    notebook: "05_Salifort_Motors/00_salifort_motors_py.ipynb",
     links: {
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/salifort-employee-churn-prediction",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/EmplyeeChurnAnalysis/FinalDashboard",
