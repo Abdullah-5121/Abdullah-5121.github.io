@@ -266,13 +266,13 @@ const PROJECTS = [
     ],
     finding: "Overwork (>250 monthly hours across 6+ projects) and career stagnation (low salary tiers with zero promotions in 5 years) drove the highest rates of employee churn. Mid-tenure employees between 3 to 5 years were the most vulnerable to voluntary departure",
     recommendation: "Cap monthly work hours at 200, restrict project assignments to 3–5 per employee, and establish clear 3-year career promotion pathways. Re-evaluate compensation for stagnated low-salary roles and integrate the Random Forest model into HR workflows for proactive quarterly stay interviews",
-    notebook: "05_Salifort_Motors/00_salifort_motors_py.ipynb",
+    notebook: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/blob/main/05_Salifort_Motors/00_salifort_motors_py.ipynb",
     links: {
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/salifort-employee-churn-prediction",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/EmplyeeChurnAnalysis/FinalDashboard",
       presentation: "05_Salifort_Motors/03_Presentation/00_Salifort Motors HR Analytics - Employee Churn _ Retention Strategy.pdf",
       dataset: "05_Salifort_Motors/01_Dataset/01_HR_capstone_dataset.csv",
-      github: "wait for it"
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors"
     }
   }
 ];
