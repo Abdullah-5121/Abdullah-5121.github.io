@@ -534,6 +534,8 @@ document.addEventListener('DOMContentLoaded', () => {
         rScript:        { label: 'R Script', icon: 'bi-filetype-raw', viewer: 'code' },
         kaggleNotebook: { label: 'Kaggle Notebook', icon: 'bi-journal-code' },
         notebookDownload: { label: 'Download Notebook (.ipynb)', icon: 'bi-download' },
+        models: { label: 'Model Files', icon: 'bi-diagram-3' },
+        model: { label: 'Model File', icon: 'bi-diagram-3' },
         dashboard:      { label: 'Live Dashboard', icon: 'bi-bar-chart-line' },
         presentation:   { label: 'Final Presentation', icon: 'bi-easel2', viewer: 'doc' },
         dataset:        { label: 'Dataset', icon: 'bi-database' },

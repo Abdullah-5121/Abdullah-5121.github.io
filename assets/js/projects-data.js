@@ -278,7 +278,8 @@ const PROJECTS = [
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/EmplyeeChurnAnalysis/FinalDashboard",
       presentation: "05_Salifort_Motors/03_Presentation/00_Salifort Motors HR Analytics - Employee Churn _ Retention Strategy.pdf",
       dataset: "05_Salifort_Motors/01_Dataset/01_HR_capstone_dataset.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors"
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors",
+      models : "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors/02_Models"
     }
   }
 ];
