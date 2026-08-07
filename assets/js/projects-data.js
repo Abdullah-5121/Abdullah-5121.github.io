@@ -216,7 +216,7 @@ const PROJECTS = [
     ],
     finding: "Top-decile players didn't just get more kills — they covered significantly more ground per match, pointing to positioning and rotation as a bigger differentiator than raw aim.",
     recommendation: "Frame skill-improvement content (or in-game coaching tips) around map movement and rotation timing, not just combat mechanics.",
-    dataSource: "PUBG match dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/code/mabdullah5121/pubg-players-performance-analysis\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    dataSource: "PUBG match dataset(Not available on Kaggle) — <a class=\"text-accent\" href=\"https://www.kaggle.com/code/mabdullah5121/pubg-players-performance-analysis\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
     links: {
       rScript: "04_Pubg/02_R_Work/01_PUBG(Cleaning+Analysis).R",
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/pubg-players-performance-analysis",
@@ -270,7 +270,7 @@ const PROJECTS = [
     ],
     finding: "Overwork (>250 monthly hours across 6+ projects) and career stagnation (low salary tiers with zero promotions in 5 years) drove the highest rates of employee churn. Mid-tenure employees between 3 to 5 years were the most vulnerable to voluntary departure",
     recommendation: "Cap monthly work hours at 200, restrict project assignments to 3–5 per employee, and establish clear 3-year career promotion pathways. Re-evaluate compensation for stagnated low-salary roles and integrate the Random Forest model into HR workflows for proactive quarterly stay interviews",
-    dataSource: "HR-Coursera Capstone Dataset— <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/mabdullah5121/01-hr-capstone-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    dataSource: "HR Capstone Dataset— <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/mabdullah5121/01-hr-capstone-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
     notebook: "05_Salifort_Motors/00_salifort_motors_py.ipynb",
     links: {
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/salifort-employee-churn-prediction",
