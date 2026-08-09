@@ -64,14 +64,14 @@ const PROJECTS = [
     finding: "Overwork (>250 monthly hours across 6+ projects) and career stagnation (low salary tiers with zero promotions in 5 years) drove the highest rates of employee churn. Mid-tenure employees between 3 to 5 years were the most vulnerable to voluntary departure",
     recommendation: "Cap monthly work hours at 200, restrict project assignments to 3–5 per employee, and establish clear 3-year career promotion pathways. Re-evaluate compensation for stagnated low-salary roles and integrate the Random Forest model into HR workflows for proactive quarterly stay interviews",
     dataSource: "HR Capstone Dataset— <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/mabdullah5121/01-hr-capstone-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
-    notebook: "05_Salifort_Motors/00_salifort_motors_py.ipynb",
+    notebook: "00_Projects/05_Salifort_Motors/00_salifort_motors_py.ipynb",
     links: {
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/salifort-employee-churn-prediction",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/EmplyeeChurnAnalysis/FinalDashboard",
-      presentation: "05_Salifort_Motors/03_Presentation/00_Salifort Motors HR Analytics - Employee Churn _ Retention Strategy.pdf",
-      dataset: "05_Salifort_Motors/01_Dataset/01_HR_capstone_dataset.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors",
-      models : "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors/02_Models"
+      presentation: "00_Projects/05_Salifort_Motors/03_Presentation/00_Salifort Motors HR Analytics - Employee Churn _ Retention Strategy.pdf",
+      dataset: "00_Projects/05_Salifort_Motors/01_Dataset/01_HR_capstone_dataset.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/05_Salifort_Motors",
+      models : "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/05_Salifort_Motors/02_Models"
     }
   },
   {
@@ -118,13 +118,13 @@ const PROJECTS = [
     finding: "Transit proximity and house age were the strongest, most statistically significant price drivers — properties closer to an MRT station commanded a clear premium. Convenience-store density added a smaller but still significant boost, while geographic coordinates showed a real but non-linear relationship with price that a straight-line model could only partially capture.",
     recommendation: "Prioritize transit-adjacent and amenity-dense listings when advising on valuation, and treat location coordinates as a signal best captured by a tree-based model (Random Forest/XGBoost) in a future iteration rather than forcing them into a linear fit. The current model is a solid, interpretable baseline (R² = 0.708) for quick price sanity-checks before a more complex spatial model is built.",
     dataSource: "RealEstate Dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/quantbruce/real-estate-price-prediction\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
-    notebook: "06_Real_Estate_Marketing_Analysis/01_Python_Work.ipynb",
+    notebook: "00_Projects/06_Real_Estate_Marketing_Analysis/01_Python_Work.ipynb",
     links: {
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/real-estate-price-predictive-analysis",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/RealEstateMaeketAnalysis/EDAView",
-      presentation: "06_Real_Estate_Marketing_Analysis/02_Presentation/01_Real_Estate_Analysis_Presentation.pdf",
-      dataset: "06_Real_Estate_Marketing_Analysis/01_Dataset/01_real_estate.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/06_Real_Estate_Marketing_Analysis"
+      presentation: "00_Projects/06_Real_Estate_Marketing_Analysis/02_Presentation/01_Real_Estate_Analysis_Presentation.pdf",
+      dataset: "00_Projects/06_Real_Estate_Marketing_Analysis/01_Dataset/01_real_estate.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/06_Real_Estate_Marketing_Analysis"
     }
   },
    {
@@ -173,13 +173,13 @@ const PROJECTS = [
     recommendation: "Frame skill-improvement content (or in-game coaching tips) around map movement and rotation timing, not just combat mechanics.",
     dataSource: "PUBG match dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/deepanjhandas/pubg-game-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
     links: {
-      rScript: "04_Pubg/02_R_Work/01_PUBG(Cleaning+Analysis).R",
+      rScript: "00_Projects/04_Pubg/02_R_Work/01_PUBG(Cleaning+Analysis).R",
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/pubg-players-performance-analysis",
       kaggleDataset: "https://www.kaggle.com/datasets/deepanjhandas/pubg-game-dataset",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/Pubg_Dataset/Final_Dashboard",
-      presentation: "04_Pubg/03_Presentation/PUBG_DATASET_PRESENTATION.pdf",
-      dataset: "04_Pubg/cleaned_pubg_dataset_Tableau.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/04_Pubg"
+      presentation: "00_Projects/04_Pubg/03_Presentation/PUBG_DATASET_PRESENTATION.pdf",
+      dataset: "00_Projects/04_Pubg/cleaned_pubg_dataset_Tableau.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/04_Pubg"
     }
   },
   {
@@ -228,13 +228,13 @@ const PROJECTS = [
     recommendation: "Design engagement nudges around active-minute streaks rather than raw step goals, especially for users in the lower activity tiers.",
     dataSource: "Fitbit Fitness Tracker — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/arashnic/fitbit\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
     links: {
-      rScript: "03_Fitbit_Consumers/02_R_Work/02_Fitbit(Cleaning+Analysis).R",
+      rScript: "00_Projects/03_Fitbit_Consumers/02_R_Work/02_Fitbit(Cleaning+Analysis).R",
       kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/fitbit-user-behaviour-analysis",
       kaggleDataset: "https://www.kaggle.com/datasets/arashnic/fitbit",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/FitbeatsDataset/Dashboard3#1",
-      presentation: "03_Fitbit_Consumers/03_Presentation/Final_Presentation_Fitbits_Dataset.pdf",
-      dataset: "03_Fitbit_Consumers/01_daily_activity_cleaned.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/03_Fitbit_Consumers"
+      presentation: "00_Projects/03_Fitbit_Consumers/03_Presentation/Final_Presentation_Fitbits_Dataset.pdf",
+      dataset: "00_Projects/03_Fitbit_Consumers/01_daily_activity_cleaned.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/03_Fitbit_Consumers"
     }
   },
   {
@@ -279,12 +279,12 @@ const PROJECTS = [
     recommendation: "Cap or tier discounts on the flagged sub-categories, and re-evaluate shipping cost allocation for the lowest-margin regions.",
     dataSource: "Superstore dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/vivek468/superstore-dataset-final\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
     links: {
-      rScript: "02_SuperStore/01_R Work/SuperStore Dataset ( Cleaning + Analysis + Visualization).R",
+      rScript: "00_Projects/02_SuperStore/01_R Work/SuperStore Dataset ( Cleaning + Analysis + Visualization).R",
       kaggleDataset: "https://www.kaggle.com/datasets/vivek468/superstore-dataset-final",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/SuperStoreDatasetVisualization/Dashboard1",
-      presentation: "02_SuperStore/02_Presentation/SuperStore Presentation.pdf",
-      dataset: "02_SuperStore/Cleaned_Superstore.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/02_SuperStore"
+      presentation: "00_Projects/02_SuperStore/02_Presentation/SuperStore Presentation.pdf",
+      dataset: "00_Projects/02_SuperStore/Cleaned_Superstore.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/02_SuperStore"
     }
   },
   {
@@ -329,11 +329,11 @@ const PROJECTS = [
     recommendation: "Launch a weekend-focused promotional campaign — a \"Weekend Warrior Annual Pass\" — that speaks directly to casual riders' leisure usage pattern.",
     dataSource: "Cyclistic ride data — <a class=\"text-accent\" href=\"https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090\" target=\"_blank\" rel=\"noopener noreferrer\">2019</a> &amp; <a class=\"text-accent\" href=\"https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855\" target=\"_blank\" rel=\"noopener noreferrer\">2020</a>",
     links: {
-      rScript: "01_Cyclistic_Rides/01_R-Work/cyclistic_analysis.R",
+      rScript: "00_Projects/01_Cyclistic_Rides/01_R-Work/cyclistic_analysis.R",
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/CyclisticDataset_17539250254980/Dashboard1",
-      presentation: "01_Cyclistic_Rides/02_Presentation/01_Casestudy-1_Report.pdf",
-      dataset: "01_Cyclistic_Rides/summary(Final).csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/01_Cyclistic_Rides"
+      presentation: "00_Projects/01_Cyclistic_Rides/02_Presentation/01_Casestudy-1_Report.pdf",
+      dataset: "00_Projects/01_Cyclistic_Rides/summary(Final).csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/01_Cyclistic_Rides"
     }
   }
 ];
