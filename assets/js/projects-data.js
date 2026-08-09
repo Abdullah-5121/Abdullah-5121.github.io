@@ -18,103 +18,168 @@ function nbviewerLink(path){
 }
 
 const PROJECTS = [
-  {
-    id: "cyclistic",
-    category: "analytics",
-    title: "Cyclistic Bike-Share Analysis",
-    blurb: "Compared casual riders vs. annual members across a full year of ride data to shape a membership-conversion strategy.",
-    subtitle: "Twelve months of ride data, one question: what actually separates a casual rider from an annual member — and how do you turn one into the other?",
-    image: "assets/img/portfolio/casestudy1.jpg",
+   {
+    id: "Salifort Motors",
+    category: "data-science",
+    title: "Salifort Motors — Employee Churn Prediction & Retention Strategy",
+    blurb: "",
+    subtitle: "Building an end-to-end Machine Learning pipeline in Python to predict employee turnover, identify key risk drivers, and deliver data-driven retention strategies for executive leadership.",
+    image: "assets/img/portfolio/casestudy5.png",
     gallery: [
-      "assets/img/portfolio/casestudy1.jpg",
-      "assets/img/00_cyclistic/01_Bar.PNG",
-      "assets/img/00_cyclistic/02_Bar.PNG",
-      "assets/img/00_cyclistic/03_How.PNG",
-      "assets/img/00_cyclistic/04_Rec.PNG",
-      "assets/img/00_cyclistic/05_DB.PNG"
+      "assets/img/portfolio/casestudy5.png",
+      "assets/img/04_Salifort_Motors/01.png",
+      "assets/img/04_Salifort_Motors/02.png",
+      "assets/img/04_Salifort_Motors/03.png",
+      "assets/img/04_Salifort_Motors/04.png",
+      "assets/img/04_Salifort_Motors/05.png",
+      "assets/img/04_Salifort_Motors/06.png"
     ],
     stack: [
-      "R",
-      "dplyr",
-      "lubridate",
-      "Tableau",
-      "PowerPoint"
+      "Python",
+      "Scikit-Learn",
+      "xgboost",
+      "Large-scale EDA",
+      "Tableau"
     ],
-    out: "Out[]: usage patterns → 3 targeted conversion recommendations",
-    objective: "Converting casual riders into annual members — a full analysis of 12 months of Cyclistic bike-share data to identify the behavioral differences that a marketing strategy could act on.",
+    out: "",
+    objective: "To perform exploratory data analysis to uncover the root causes of employee overwork and turnover, train and tune tree-based machine learning models (Random Forest, XGBoost) to accurately predict at-risk staff before they resign, and translate model feature importances into actionable HR policies—like workload caps and career pathways—to increase retention and reduce hiring costs.",
     steps: [
       {
-        t: "Data cleaning & wrangling",
-        d: "consolidated and pre-processed 12 months of ride logs in R and RStudio."
+        t: "Data cleaning & preprocessing",
+        d: "handled missing values, encoded categorical features, and structured the dataset for tree-based architectures."
       },
       {
-        t: "Statistical summary",
-        d: "calculated average ride length and total ride counts by rider type."
+        t: "Exploratory data analysis",
+        d: "isolated overwork clusters, pay stagnation, and project underutilization driving high-risk employee departures."
       },
       {
-        t: "Visualization",
-        d: "built Tableau dashboards showing usage patterns by day and month."
+        t: "Predictive modeling",
+        d: "trained, hyperparameter-tuned, and evaluated Decision Tree, Random Forest, and XGBoost classifiers via grid search."
+      },
+      {
+        t: "Evaluation & deployment",
+        d: "achieved a 99% test F1-score with Random Forest, extracted Gini feature importances, and shipped actionable HR retention policies."
       }
     ],
-    finding: "Casual riders take significantly longer rides on weekends for leisure, while annual members take shorter, frequent commute rides on weekdays.",
-    recommendation: "Launch a weekend-focused promotional campaign — a \"Weekend Warrior Annual Pass\" — that speaks directly to casual riders' leisure usage pattern.",
-    dataSource: "Cyclistic ride data — <a class=\"text-accent\" href=\"https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090\" target=\"_blank\" rel=\"noopener noreferrer\">2019</a> &amp; <a class=\"text-accent\" href=\"https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855\" target=\"_blank\" rel=\"noopener noreferrer\">2020</a>",
+    finding: "Overwork (>250 monthly hours across 6+ projects) and career stagnation (low salary tiers with zero promotions in 5 years) drove the highest rates of employee churn. Mid-tenure employees between 3 to 5 years were the most vulnerable to voluntary departure",
+    recommendation: "Cap monthly work hours at 200, restrict project assignments to 3–5 per employee, and establish clear 3-year career promotion pathways. Re-evaluate compensation for stagnated low-salary roles and integrate the Random Forest model into HR workflows for proactive quarterly stay interviews",
+    dataSource: "HR Capstone Dataset— <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/mabdullah5121/01-hr-capstone-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    notebook: "05_Salifort_Motors/00_salifort_motors_py.ipynb",
     links: {
-      rScript: "01_Cyclistic_Rides/01_R-Work/cyclistic_analysis.R",
-      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/CyclisticDataset_17539250254980/Dashboard1",
-      presentation: "01_Cyclistic_Rides/02_Presentation/01_Casestudy-1_Report.pdf",
-      dataset: "01_Cyclistic_Rides/summary(Final).csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/01_Cyclistic_Rides"
+      kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/salifort-employee-churn-prediction",
+      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/EmplyeeChurnAnalysis/FinalDashboard",
+      presentation: "05_Salifort_Motors/03_Presentation/00_Salifort Motors HR Analytics - Employee Churn _ Retention Strategy.pdf",
+      dataset: "05_Salifort_Motors/01_Dataset/01_HR_capstone_dataset.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors",
+      models : "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors/02_Models"
     }
   },
   {
-    id: "superstore",
-    category: "analytics",
-    title: "Superstore Sales Performance",
-    blurb: "Diagnosed profitability leaks across regions, categories and shipping modes for a national retail chain.",
-    subtitle: "A national retail chain's full order history, broken down by region, category and shipping mode to find exactly where profit was leaking.",
-    image: "assets/img/portfolio/casestudy2.jpg",
+    id: "Real Estate Market Analysis",
+    category: "data-science",
+    title: "Real Estate Market Analysis — Price Prediction & Valuation Insights",
+    subtitle: "Analyzing residential real estate transactions with Python to uncover the key drivers of property price, and building an interactive Tableau dashboard to communicate valuation insights to non-technical stakeholders.",
+    image: "assets/img/portfolio/casestudy6.png",
     gallery: [
-      "assets/img/portfolio/casestudy2.jpg",
-      "assets/img/01_superstore/01_BAR.PNG",
-      "assets/img/01_superstore/02_BAR.PNG",
-      "assets/img/01_superstore/03_BAR.PNG",
-      "assets/img/01_superstore/04_BAR.PNG",
-      "assets/img/01_superstore/05_Rec.PNG",
-      "assets/img/01_superstore/06_Dashboard.PNG"
+      "assets/img/portfolio/casestudy6.png",
+      "assets/img/05_Real_Estate/1.png",
+      "assets/img/05_Real_Estate/2.png",
+      "assets/img/05_Real_Estate/3.png",
+      "assets/img/05_Real_Estate/4.png",
+      "assets/img/05_Real_Estate/5.png",
+      "assets/img/05_Real_Estate/6.png"
+    ],
+    stack: [
+      "Python",
+      "Pandas",
+      "Scikit-Learn",
+      "Statsmodels",
+      "Tableau"
+    ],
+    objective: "To clean and engineer time-based features from raw property transaction data, explore how house age, transit proximity, and nearby amenities relate to price, apply statistical transformations to prepare skewed features for linear modeling, and fit a multiple linear regression to predict price per unit area — translating the model's coefficients into a clear, interpretable explanation of what actually drives residential value.",
+    steps: [
+      {
+        t: "Data cleaning & feature engineering",
+        d: "standardized raw transaction data and extracted transaction year/month from a decimal date field for time-based analysis."
+      },
+      {
+        t: "Exploratory data analysis",
+        d: "uncovered yearly price appreciation and a positive relationship between nearby convenience stores and price per unit area."
+      },
+      {
+        t: "Feature transformation & modeling",
+        d: "applied square and log transformations to reduce skew in house age and MRT distance, then trained a multiple linear regression with an 80/20 train-test split."
+      },
+      {
+        t: "Evaluation & dashboard delivery",
+        d: "achieved R² = 0.72 on held-out data, interpreted each feature's statistical significance and slope, and shipped the findings as an interactive Tableau dashboard."
+      }
+    ],
+    finding: "Transit proximity and house age were the strongest, most statistically significant price drivers — properties closer to an MRT station commanded a clear premium. Convenience-store density added a smaller but still significant boost, while geographic coordinates showed a real but non-linear relationship with price that a straight-line model could only partially capture.",
+    recommendation: "Prioritize transit-adjacent and amenity-dense listings when advising on valuation, and treat location coordinates as a signal best captured by a tree-based model (Random Forest/XGBoost) in a future iteration rather than forcing them into a linear fit. The current model is a solid, interpretable baseline (R² = 0.708) for quick price sanity-checks before a more complex spatial model is built.",
+    dataSource: "RealEstate Dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/quantbruce/real-estate-price-prediction\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    notebook: "06_Real_Estate_Marketing_Analysis/01_Python_Work.ipynb",
+    links: {
+      kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/real-estate-price-predictive-analysis",
+      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/RealEstateMaeketAnalysis/EDAView",
+      presentation: "06_Real_Estate_Marketing_Analysis/02_Presentation/01_Real_Estate_Analysis_Presentation.pdf",
+      dataset: "06_Real_Estate_Marketing_Analysis/01_Dataset/01_real_estate.csv",
+      github: ""
+    }
+  },
+   {
+    id: "pubg",
+    category: "analytics",
+    title: "PUBG Player Performance Analysis",
+    blurb: "Mined 6.4M rows of match data to uncover the habits that separate top-percentile players from the rest.",
+    subtitle: "6.4 million rows of match data, mined to find out exactly what separates top-decile players from everyone else.",
+    image: "assets/img/portfolio/casestudy4.jpg",
+    gallery: [
+      "assets/img/portfolio/casestudy4.jpg",
+      "assets/img/03_pubg/01_Pie.PNG",
+      "assets/img/03_pubg/02_bar1.PNG",
+      "assets/img/03_pubg/03_Scatter_plt.PNG",
+      "assets/img/03_pubg/04_Box.PNG",
+      "assets/img/03_pubg/05_Recommend.PNG",
+      "assets/img/03_pubg/06_Dash.PNG"
     ],
     stack: [
       "R",
-      "ggplot2",
-      "Tableau",
-      "Excel"
+      "Large-scale EDA",
+      "Kaggle",
+      "Tableau"
     ],
-    out: "Out[]: 3 underperforming segments flagged for discount-policy review",
-    objective: "Diagnosing where a national retail chain's profitability was breaking down — across regions, product categories, and shipping modes — to guide a discount and shipping-policy review.",
+    out: "Out[]: 6.4M rows processed → top-decile player profile",
+    objective: "Processing 6.4 million rows of PUBG match data to build a statistical profile of top-decile players — the habits and stats that most reliably separate them from the rest of the player base.",
     steps: [
       {
-        t: "Data cleaning",
-        d: "standardized and de-duplicated the full order-level dataset in R."
+        t: "Large-scale cleaning",
+        d: "filtered, cleaned and sampled 6.4M rows of match records down to an analysis-ready set."
       },
       {
-        t: "Segmentation",
-        d: "broke down sales & profit by region, category, sub-category and shipping mode."
+        t: "Statistical profiling",
+        d: "compared kills, damage, walk distance and survival time across performance tiers."
       },
       {
         t: "Visualization",
-        d: "built an interactive Tableau dashboard for stakeholders to drill into any segment."
+        d: "built a Tableau dashboard to compare tiers across match types."
+      },
+      {
+        t: "Publishing",
+        d: "shipped the full notebook and write-up on Kaggle."
       }
     ],
-    finding: "A small set of sub-categories and regions were consistently sold at a loss, largely driven by aggressive discounting on already thin-margin items.",
-    recommendation: "Cap or tier discounts on the flagged sub-categories, and re-evaluate shipping cost allocation for the lowest-margin regions.",
-    dataSource: "Superstore dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/vivek468/superstore-dataset-final\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    finding: "Top-decile players didn't just get more kills — they covered significantly more ground per match, pointing to positioning and rotation as a bigger differentiator than raw aim.",
+    recommendation: "Frame skill-improvement content (or in-game coaching tips) around map movement and rotation timing, not just combat mechanics.",
+    dataSource: "PUBG match dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/deepanjhandas/pubg-game-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
     links: {
-      rScript: "02_SuperStore/01_R Work/SuperStore Dataset ( Cleaning + Analysis + Visualization).R",
-      kaggleDataset: "https://www.kaggle.com/datasets/vivek468/superstore-dataset-final",
-      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/SuperStoreDatasetVisualization/Dashboard1",
-      presentation: "02_SuperStore/02_Presentation/SuperStore Presentation.pdf",
-      dataset: "02_SuperStore/Cleaned_Superstore.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/02_SuperStore"
+      rScript: "04_Pubg/02_R_Work/01_PUBG(Cleaning+Analysis).R",
+      kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/pubg-players-performance-analysis",
+      kaggleDataset: "https://www.kaggle.com/datasets/deepanjhandas/pubg-game-dataset",
+      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/Pubg_Dataset/Final_Dashboard",
+      presentation: "04_Pubg/03_Presentation/PUBG_DATASET_PRESENTATION.pdf",
+      dataset: "04_Pubg/cleaned_pubg_dataset_Tableau.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/04_Pubg"
     }
   },
   {
@@ -173,113 +238,102 @@ const PROJECTS = [
     }
   },
   {
-    id: "pubg",
+    id: "superstore",
     category: "analytics",
-    title: "PUBG Player Performance Analysis",
-    blurb: "Mined 6.4M rows of match data to uncover the habits that separate top-percentile players from the rest.",
-    subtitle: "6.4 million rows of match data, mined to find out exactly what separates top-decile players from everyone else.",
-    image: "assets/img/portfolio/casestudy4.jpg",
+    title: "Superstore Sales Performance",
+    blurb: "Diagnosed profitability leaks across regions, categories and shipping modes for a national retail chain.",
+    subtitle: "A national retail chain's full order history, broken down by region, category and shipping mode to find exactly where profit was leaking.",
+    image: "assets/img/portfolio/casestudy2.jpg",
     gallery: [
-      "assets/img/portfolio/casestudy4.jpg",
-      "assets/img/03_pubg/01_Pie.PNG",
-      "assets/img/03_pubg/02_bar1.PNG",
-      "assets/img/03_pubg/03_Scatter_plt.PNG",
-      "assets/img/03_pubg/04_Box.PNG",
-      "assets/img/03_pubg/05_Recommend.PNG",
-      "assets/img/03_pubg/06_Dash.PNG"
+      "assets/img/portfolio/casestudy2.jpg",
+      "assets/img/01_superstore/01_BAR.PNG",
+      "assets/img/01_superstore/02_BAR.PNG",
+      "assets/img/01_superstore/03_BAR.PNG",
+      "assets/img/01_superstore/04_BAR.PNG",
+      "assets/img/01_superstore/05_Rec.PNG",
+      "assets/img/01_superstore/06_Dashboard.PNG"
     ],
     stack: [
       "R",
-      "Large-scale EDA",
-      "Kaggle",
-      "Tableau"
+      "ggplot2",
+      "Tableau",
+      "Excel"
     ],
-    out: "Out[]: 6.4M rows processed → top-decile player profile",
-    objective: "Processing 6.4 million rows of PUBG match data to build a statistical profile of top-decile players — the habits and stats that most reliably separate them from the rest of the player base.",
+    out: "Out[]: 3 underperforming segments flagged for discount-policy review",
+    objective: "Diagnosing where a national retail chain's profitability was breaking down — across regions, product categories, and shipping modes — to guide a discount and shipping-policy review.",
     steps: [
       {
-        t: "Large-scale cleaning",
-        d: "filtered, cleaned and sampled 6.4M rows of match records down to an analysis-ready set."
+        t: "Data cleaning",
+        d: "standardized and de-duplicated the full order-level dataset in R."
       },
       {
-        t: "Statistical profiling",
-        d: "compared kills, damage, walk distance and survival time across performance tiers."
+        t: "Segmentation",
+        d: "broke down sales & profit by region, category, sub-category and shipping mode."
       },
       {
         t: "Visualization",
-        d: "built a Tableau dashboard to compare tiers across match types."
-      },
-      {
-        t: "Publishing",
-        d: "shipped the full notebook and write-up on Kaggle."
+        d: "built an interactive Tableau dashboard for stakeholders to drill into any segment."
       }
     ],
-    finding: "Top-decile players didn't just get more kills — they covered significantly more ground per match, pointing to positioning and rotation as a bigger differentiator than raw aim.",
-    recommendation: "Frame skill-improvement content (or in-game coaching tips) around map movement and rotation timing, not just combat mechanics.",
-    dataSource: "PUBG match dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/deepanjhandas/pubg-game-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    finding: "A small set of sub-categories and regions were consistently sold at a loss, largely driven by aggressive discounting on already thin-margin items.",
+    recommendation: "Cap or tier discounts on the flagged sub-categories, and re-evaluate shipping cost allocation for the lowest-margin regions.",
+    dataSource: "Superstore dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/vivek468/superstore-dataset-final\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
     links: {
-      rScript: "04_Pubg/02_R_Work/01_PUBG(Cleaning+Analysis).R",
-      kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/pubg-players-performance-analysis",
-      kaggleDataset: "https://www.kaggle.com/datasets/deepanjhandas/pubg-game-dataset",
-      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/Pubg_Dataset/Final_Dashboard",
-      presentation: "04_Pubg/03_Presentation/PUBG_DATASET_PRESENTATION.pdf",
-      dataset: "04_Pubg/cleaned_pubg_dataset_Tableau.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/04_Pubg"
+      rScript: "02_SuperStore/01_R Work/SuperStore Dataset ( Cleaning + Analysis + Visualization).R",
+      kaggleDataset: "https://www.kaggle.com/datasets/vivek468/superstore-dataset-final",
+      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/SuperStoreDatasetVisualization/Dashboard1",
+      presentation: "02_SuperStore/02_Presentation/SuperStore Presentation.pdf",
+      dataset: "02_SuperStore/Cleaned_Superstore.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/02_SuperStore"
     }
   },
   {
-    id: "Salifort Motors",
-    category: "data-science",
-    title: "Salifort Motors — Employee Churn Prediction & Retention Strategy",
-    blurb: "",
-    subtitle: "Building an end-to-end Machine Learning pipeline in Python to predict employee turnover, identify key risk drivers, and deliver data-driven retention strategies for executive leadership.",
-    image: "assets/img/portfolio/casestudy5.png",
+    id: "cyclistic",
+    category: "analytics",
+    title: "Cyclistic Bike-Share Analysis",
+    blurb: "Compared casual riders vs. annual members across a full year of ride data to shape a membership-conversion strategy.",
+    subtitle: "Twelve months of ride data, one question: what actually separates a casual rider from an annual member — and how do you turn one into the other?",
+    image: "assets/img/portfolio/casestudy1.jpg",
     gallery: [
-      "assets/img/portfolio/casestudy5.png",
-      "assets/img/04_Salifort_Motors/01.png",
-      "assets/img/04_Salifort_Motors/02.png",
-      "assets/img/04_Salifort_Motors/03.png",
-      "assets/img/04_Salifort_Motors/04.png",
-      "assets/img/04_Salifort_Motors/05.png",
-      "assets/img/04_Salifort_Motors/06.png"
+      "assets/img/portfolio/casestudy1.jpg",
+      "assets/img/00_cyclistic/01_Bar.PNG",
+      "assets/img/00_cyclistic/02_Bar.PNG",
+      "assets/img/00_cyclistic/03_How.PNG",
+      "assets/img/00_cyclistic/04_Rec.PNG",
+      "assets/img/00_cyclistic/05_DB.PNG"
     ],
     stack: [
-      "Python",
-      "Scikit-Learn",
-      "xgboost",
-      "Large-scale EDA",
-      "Tableau"
+      "R",
+      "dplyr",
+      "lubridate",
+      "Tableau",
+      "PowerPoint"
     ],
-    out: "",
-    objective: "To perform exploratory data analysis to uncover the root causes of employee overwork and turnover, train and tune tree-based machine learning models (Random Forest, XGBoost) to accurately predict at-risk staff before they resign, and translate model feature importances into actionable HR policies—like workload caps and career pathways—to increase retention and reduce hiring costs.",
+    out: "Out[]: usage patterns → 3 targeted conversion recommendations",
+    objective: "Converting casual riders into annual members — a full analysis of 12 months of Cyclistic bike-share data to identify the behavioral differences that a marketing strategy could act on.",
     steps: [
       {
-        t: "Data cleaning & preprocessing",
-        d: "handled missing values, encoded categorical features, and structured the dataset for tree-based architectures."
+        t: "Data cleaning & wrangling",
+        d: "consolidated and pre-processed 12 months of ride logs in R and RStudio."
       },
       {
-        t: "Exploratory data analysis",
-        d: "isolated overwork clusters, pay stagnation, and project underutilization driving high-risk employee departures."
+        t: "Statistical summary",
+        d: "calculated average ride length and total ride counts by rider type."
       },
       {
-        t: "Predictive modeling",
-        d: "trained, hyperparameter-tuned, and evaluated Decision Tree, Random Forest, and XGBoost classifiers via grid search."
-      },
-      {
-        t: "Evaluation & deployment",
-        d: "achieved a 99% test F1-score with Random Forest, extracted Gini feature importances, and shipped actionable HR retention policies."
+        t: "Visualization",
+        d: "built Tableau dashboards showing usage patterns by day and month."
       }
     ],
-    finding: "Overwork (>250 monthly hours across 6+ projects) and career stagnation (low salary tiers with zero promotions in 5 years) drove the highest rates of employee churn. Mid-tenure employees between 3 to 5 years were the most vulnerable to voluntary departure",
-    recommendation: "Cap monthly work hours at 200, restrict project assignments to 3–5 per employee, and establish clear 3-year career promotion pathways. Re-evaluate compensation for stagnated low-salary roles and integrate the Random Forest model into HR workflows for proactive quarterly stay interviews",
-    notebook: "05_Salifort_Motors/00_salifort_motors_py.ipynb",
+    finding: "Casual riders take significantly longer rides on weekends for leisure, while annual members take shorter, frequent commute rides on weekdays.",
+    recommendation: "Launch a weekend-focused promotional campaign — a \"Weekend Warrior Annual Pass\" — that speaks directly to casual riders' leisure usage pattern.",
+    dataSource: "Cyclistic ride data — <a class=\"text-accent\" href=\"https://docs.google.com/spreadsheets/d/1uCTsHlZLm4L7-ueaSLwDg0ut3BP_V4mKDo2IMpaXrk4/template/preview?resourcekey=0-dQAUjAu2UUCsLEQQt20PDA#gid=1797029090\" target=\"_blank\" rel=\"noopener noreferrer\">2019</a> &amp; <a class=\"text-accent\" href=\"https://docs.google.com/spreadsheets/d/179QVLO_yu5BJEKFVZShsKag74ZaUYIF6FevLYzs3hRc/template/preview#gid=640449855\" target=\"_blank\" rel=\"noopener noreferrer\">2020</a>",
     links: {
-      kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/salifort-employee-churn-prediction",
-      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/EmplyeeChurnAnalysis/FinalDashboard",
-      presentation: "05_Salifort_Motors/03_Presentation/00_Salifort Motors HR Analytics - Employee Churn _ Retention Strategy.pdf",
-      dataset: "05_Salifort_Motors/01_Dataset/01_HR_capstone_dataset.csv",
-      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors",
-      models : "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/05_Salifort_Motors/02_Models"
+      rScript: "01_Cyclistic_Rides/01_R-Work/cyclistic_analysis.R",
+      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/CyclisticDataset_17539250254980/Dashboard1",
+      presentation: "01_Cyclistic_Rides/02_Presentation/01_Casestudy-1_Report.pdf",
+      dataset: "01_Cyclistic_Rides/summary(Final).csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/01_Cyclistic_Rides"
     }
   }
 ];
