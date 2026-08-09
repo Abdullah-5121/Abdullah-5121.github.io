@@ -124,7 +124,7 @@ const PROJECTS = [
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/RealEstateMaeketAnalysis/EDAView",
       presentation: "06_Real_Estate_Marketing_Analysis/02_Presentation/01_Real_Estate_Analysis_Presentation.pdf",
       dataset: "06_Real_Estate_Marketing_Analysis/01_Dataset/01_real_estate.csv",
-      github: ""
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/06_Real_Estate_Marketing_Analysis"
     }
   },
    {
