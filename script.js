@@ -426,6 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.tab-btn');
 
   const linkMeta = {
+    tryModel:       { label: 'Try the Model', icon: 'bi-cpu' },
     dashboard:     { label: 'Live Dashboard', icon: 'bi-bar-chart-line' },
     presentation:  { label: 'Presentation', icon: 'bi-easel2', viewer: 'doc' },
     rScript:       { label: 'R Script', icon: 'bi-filetype-raw', viewer: 'code' },
@@ -531,6 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const nextP = PROJECTS[(idx + 1) % PROJECTS.length];
 
       const csLinkMeta = {
+        tryModel:       { label: 'Try the Model', icon: 'bi-cpu' },
         rScript:        { label: 'R Script', icon: 'bi-filetype-raw', viewer: 'code' },
         kaggleNotebook: { label: 'Kaggle Notebook', icon: 'bi-journal-code' },
         notebookDownload: { label: 'Download Notebook (.ipynb)', icon: 'bi-download' },
