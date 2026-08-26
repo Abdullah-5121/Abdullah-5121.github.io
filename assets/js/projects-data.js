@@ -70,7 +70,7 @@ const PROJECTS = [
       dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/BankTermDepositPredictiveAnalyticsCampaignIntelligence/Dashboard1",
       presentation: "00_Projects/07_Bank_Deposit_Prediction/02_Presentation/01_Final_Presentation.pdf",
       dataset: "00_Projects/07_Bank_Deposit_Prediction/01_Dataset/01_bank.csv",
-      github: ""
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/07_Bank_Deposit_Prediction"
     }
   },
   {
