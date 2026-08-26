@@ -19,6 +19,61 @@ function nbviewerLink(path){
 
 const PROJECTS = [
    {
+    id: "Bank Term Deposit Prediction",
+    category: "data-science",
+    title: "Bank Term Deposit — Predictive Analytics & Campaign Intelligence",
+    blurb: "",
+    subtitle: "Building an end-to-end Machine Learning and Business Intelligence pipeline in Python and Tableau to predict customer term deposit subscriptions and optimize banking telemarketing outreach efficiency.",
+    image: "assets/img/portfolio/casestudy7.png",
+    gallery: [
+      "assets/img/portfolio/casestudy7.png",
+      "assets/img/06_Bank/1.png",
+      "assets/img/06_Bank/2.png",
+      "assets/img/06_Bank/3.png",
+      "assets/img/06_Bank/4.png",
+      "assets/img/06_Bank/5.png"
+    ],
+    stack: [
+      "Python",
+      "Scikit-Learn",
+      "Logistic Regression",
+      "Decision Trees",
+      "Tableau",
+      "Figma"
+    ],
+    out: "",
+    objective: "To conduct exploratory data analysis on banking telemarketing interactions, engineer scalable preprocessing pipelines using StandardScaler and OneHotEncoder without data leakage, evaluate and tune classification architectures (Logistic Regression vs. Decision Trees), and translate predictive odds ratios into an interactive Tableau campaign intelligence dashboard.",
+    steps: [
+      {
+        t: "Data preprocessing & leakage-free split",
+        d: "structured clean train/validation/test splits, scaled continuous variables, and applied one-hot encoding strictly fitted on training data."
+      },
+      {
+        t: "Exploratory & behavioral analysis",
+        d: "identified call duration tipping points, seasonal demand cycles, and the drag of debt obligations on subscription rates."
+      },
+      {
+        t: "Model training & tuning",
+        d: "benchmarked Logistic Regression against GridSearchCV-tuned Decision Tree classifiers, evaluating precision-recall tradeoffs."
+      },
+      {
+        t: "Evaluation & BI dashboard deployment",
+        d: "achieved 82.40% test accuracy, 82.13% precision, and 81.22% F1-score with Logistic Regression; deployed an interactive glassmorphism Tableau dashboard."
+      }
+    ],
+    finding: "Prior campaign success (poutcome_success, +2.26 log-odds) and call duration (+1.93 log-odds) were the strongest positive drivers of deposit conversion. Conversely, unverified contact methods (contact_unknown, -1.65 log-odds), off-peak months (Jan, Nov, Jul), and personal debt burdens significantly reduced subscription likelihood.",
+    recommendation: "Prioritize leads with previous campaign engagement, route outreach through verified cellular channels, and time major telemarketing pushes during high-yield transition months (March, September, October, December). Transition leads with active personal loans to low-barrier automated savings products rather than long-term deposits.",
+    dataSource: "Bank Marketing Dataset— <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    notebook: "00_Projects/07_Bank_Deposit_Prediction/01_bank_deposit_prediction.ipynb",
+    links: {
+      kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/bank-deposit-prediction",
+      dashboard: "https://public.tableau.com/app/profile/muhammad.abdullah6976/viz/BankTermDepositPredictiveAnalyticsCampaignIntelligence/Dashboard1",
+      presentation: "00_Projects/07_Bank_Deposit_Prediction/02_Presentation/01_Final_Presentation.pdf",
+      dataset: "00_Projects/07_Bank_Deposit_Prediction/01_Dataset/01_bank.csv",
+      github: ""
+    }
+  },
+  {
     id: "Salifort Motors",
     category: "data-science",
     title: "Salifort Motors — Employee Churn Prediction & Retention Strategy",
