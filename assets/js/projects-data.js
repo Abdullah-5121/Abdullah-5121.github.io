@@ -26,7 +26,7 @@ const PROJECTS = [
     subtitle: "redicting fish species from physical measurements — benchmarking four classification algorithms with rigorous feature selection.",
     image: "assets/img/portfolio/casestudy8.png",
     gallery: [
-      "assets/img/portfolio/casestudy7.png",
+      "assets/img/portfolio/casestudy8.png",
       "assets/img/07_Fish/01.png",
       "assets/img/07_Fish/02.png",
       "assets/img/07_Fish/03.png",
