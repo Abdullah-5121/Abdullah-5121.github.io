@@ -19,6 +19,56 @@ function nbviewerLink(path){
 
 const PROJECTS = [
    {
+    id: "Fish Species Prediction",
+    category: "data-science",
+    title: "Fish Species Prediction — Predictive Modeling",
+    blurb: "",
+    subtitle: "redicting fish species from physical measurements — benchmarking four classification algorithms with rigorous feature selection.",
+    image: "assets/img/portfolio/casestudy8.png",
+    gallery: [
+      "assets/img/portfolio/casestudy7.png",
+      "assets/img/07_Fish/01.png",
+      "assets/img/07_Fish/02.png",
+      "assets/img/07_Fish/03.png",
+      "assets/img/07_Fish/04.png"
+      
+    ],
+    stack: [
+      "Python",
+      "Scikit-Learn",
+      "Logistic Regression",
+      "Tuned Decision Trees",
+      "Tuned XGBoost",
+      "Tuned Random Forest"
+    ],
+    out: "",
+    objective: "Evaluate multiple classifiers, select a champion model, and identify key morphological predictors for species separation.",
+    steps: [
+      {
+        t: "Data preprocessing & leakage-free split",
+        d: "structured clean train/validation/test splits, scaled variables."
+      },
+      {
+        t: "Model training & tuning",
+        d: "benchmarked Logistic Regression against GridSearchCV-tuned (Decision Tree , Random Forest & XGBoost) classifiers, evaluating precision-recall tradeoffs."
+      },
+      {
+        t: "Evaluation",
+        d: "achieved 81.3% test accuracy, 70.8% precision, 81.3% Recall , 75.2% F1-score with Logistic Regression;"
+      }
+    ],
+    finding: "Perch, Roach, Smelt, and Whitefish overlap significantly in body dimensions, causing per-class metrics to fluctuate. Length feature VIF dropped from 2,085 to under 10, producing reliable, trustworthy model coefficients.",
+    recommendation: "Collect additional Roach & Whitefish samples to avoid fluctuation & calculating other features that have less coorelation with each other to produce best results.",
+    dataSource: "Fish Market Dataset — <a class=\"text-accent\" href=\"https://www.kaggle.com/datasets/abbasi1214/fish-market-dataset\" target=\"_blank\" rel=\"noopener noreferrer\">Kaggle</a>",
+    notebook: "00_Projects/08_Species_Prediction/01_Fish_Predict.ipynb",
+    links: {
+      kaggleNotebook: "https://www.kaggle.com/code/mabdullah5121/fish-species-prediction",
+      presentation: "00_Projects/08_Species_Prediction/03_Presentation/Fish Species Prediction.pdf",
+      dataset: "00_Projects/08_Species_Prediction/01_Dataset/00_fishers_maket.csv",
+      github: "https://github.com/Abdullah-5121/Abdullah-5121.github.io/tree/main/00_Projects/08_Species_Prediction"
+    }
+  },
+   {
     id: "Bank Term Deposit Prediction",
     category: "data-science",
     title: "Bank Term Deposit — Predictive Analytics & Campaign Intelligence",
